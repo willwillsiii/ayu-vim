@@ -58,6 +58,10 @@ call ayu#hi('Title', 'keyword', '')
 call ayu#hi('Visual', '', 'selection_inactive')
 call ayu#hi('WarningMsg', 'warning', '')
 
+" Experimental
+call ayu#hi('Conditional', 'conditional', '')
+call ayu#hi('Repeat', 'repeat', '')
+
 "}}}
 
 " Generic Syntax Highlighting: (see :help group-name)"{{{
@@ -95,6 +99,9 @@ call ayu#hi('qfLineNr', 'keyword', '')
 
 call ayu#hi('Conceal', 'comment', '')
 call ayu#hi('CursorLineConceal', 'guide_normal', 'line')
+
+" Experimental
+call ayu#hi('PreCondit', 'conditional', '')
 
 "}}}
 
@@ -236,6 +243,13 @@ call ayu#hi('typescriptGlobalMethod', 'func', '')
 call ayu#hi('typescriptFunctionMethod', 'func', '')
 call ayu#hi('typescriptBOMLocationMethod', 'func', '')
 
+" Experimental
+call ayu#hi('typescriptFuncKeyword', 'keyword_func', '')
+call ayu#hi('typescriptConditional', 'conditional', '')
+call ayu#hi('typescriptCase', 'conditional', '')
+call ayu#hi('typescriptRepeat', 'repeat', '')
+call ayu#hi('typescriptBranch', 'repeat', '')
+
 " }}}
 
 " Javascript:" {{{
@@ -254,6 +268,9 @@ call ayu#hi('jsObjectKey', 'tag', '')
 call ayu#hi('jsObjectProp', 'tag', '')
 
 call ayu#hi('jsRegexpString', 'regexp', '')
+
+" Experimental
+call ayu#hi('jsFunction', 'keyword_func', '')
 
 " }}}
 
@@ -274,6 +291,11 @@ call ayu#hi('TSConstBuiltin', 'constant', '')
 call ayu#hi('TSStringRegex', 'regexp', '')
 
 call ayu#hi('TSFuncMacro', 'func', '')
+
+" Experimental
+call ayu#hi('TSKeywordFunction', 'keyword_func', '')
+call ayu#hi('TSRepeat', 'repeat', '')
+call ayu#hi('TSConditional', 'conditional', '')
 
 " }}}
 
