@@ -198,7 +198,7 @@ call ayu#hi('LspDiagnosticsSignInformation', 'fg', s:sign_bg())
 " YATS:" {{{
 
 call ayu#hi('typescriptDecorator', 'markup', '')
-call ayu#hi('typescriptImport', 'accent', '')
+call ayu#hi('typescriptImport', 'import', '')
 call ayu#hi('typescriptExport', 'accent', '')
 call ayu#hi('typescriptIdentifier', 'tag', '', 'italic')
 call ayu#hi('typescriptAssign', 'operator', '')
@@ -276,7 +276,7 @@ call ayu#hi('jsFunction', 'keyword_func', '')
 
 " TreeSitter:" {{{
 
-call ayu#hi('TSInclude', 'accent', '')
+call ayu#hi('TSInclude', 'import', '')
 
 call ayu#hi('TSParameter', 'special', '')
 

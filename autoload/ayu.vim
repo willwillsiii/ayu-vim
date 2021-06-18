@@ -55,6 +55,7 @@ let g:ayu#palette.warning = {'light': "#FA8D3E",  'mirage': "#FFA759",  'dark': 
 let g:ayu#palette.keyword_func = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#80AAFF" : "#FFA759",  'dark': "#FF8F40"}
 let g:ayu#palette.repeat       = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#FF595E" : "#FFA759",  'dark': "#FF8F40"}
 let g:ayu#palette.conditional  = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#FF8214" : "#FFA759",  'dark': "#FF8F40"}
+let g:ayu#palette.import       = {'light': "#FF9940", 'mirage': s:experimental_colors ? "#FFBB33" : "#FFCC66", 'dark': "#E6B450"}
 
 " }}}
 
