@@ -41,6 +41,7 @@ call ayu#hi('MoreMsg', 'string', '')
 call ayu#hi('NonText', 'guide_normal', '')
 call ayu#hi('Pmenu', 'fg', 'selection_inactive')
 call ayu#hi('PmenuSel', 'fg', 'selection_inactive', 'reverse')
+call ayu#hi('FloatBorder', 'fg', 'selection_inactive')
 call ayu#hi('Question', 'string', '')
 call ayu#hi('Search', 'bg', 'constant')
 call ayu#hi('SpecialKey', 'selection_inactive', '')
@@ -268,6 +269,10 @@ call ayu#hi('jsObjectKey', 'tag', '')
 call ayu#hi('jsObjectProp', 'tag', '')
 
 call ayu#hi('jsRegexpString', 'regexp', '')
+
+call ayu#hi('jsStorageClass', 'keyword', '')
+
+call ayu#hi('jsArrowFunction', 'operator', '')
 
 " Experimental
 call ayu#hi('jsFunction', 'keyword_func', '')
