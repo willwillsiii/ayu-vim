@@ -52,10 +52,17 @@ let g:ayu#palette.vcs_removed        = {'light': "#F27983",  'mirage': "#F27983"
 let g:ayu#palette.fg_idle = {'light': "#828C99",  'mirage': "#607080",  'dark': "#3E4B59"}
 let g:ayu#palette.warning = {'light': "#FA8D3E",  'mirage': "#FFA759",  'dark': "#FF8F40"}
 
-let g:ayu#palette.keyword_func = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#80AAFF" : "#FFA759",  'dark': "#FF8F40"}
-let g:ayu#palette.repeat       = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#FF595E" : "#FFA759",  'dark': "#FF8F40"}
-let g:ayu#palette.conditional  = {'light': "#FA8D3E", 'mirage': s:experimental_colors ? "#FF8214" : "#FFA759",  'dark': "#FF8F40"}
-let g:ayu#palette.import       = {'light': "#FF9940", 'mirage': s:experimental_colors ? "#FFBB33" : "#FFCC66", 'dark': "#E6B450"}
+if s:experimental_colors
+    let g:ayu#palette.keyword_func = {'light': "#3EABFA", 'mirage': "#80AAFF", 'dark': "#40B0FF"}
+    let g:ayu#palette.repeat       = {'light': "#FA3E4D", 'mirage': "#FF595E", 'dark': "#FF4051"}
+    let g:ayu#palette.conditional  = {'light': "#F9700C", 'mirage': "#FF8214", 'dark': "#FF710D"}
+    let g:ayu#palette.import       = {'light': "#FF7E0D", 'mirage': "#FFBB33", 'dark': "#E0A123"}
+else
+    let g:ayu#palette.keyword_func = g:ayu#palette.keyword
+    let g:ayu#palette.repeat       = g:ayu#palette.keyword
+    let g:ayu#palette.conditional  = g:ayu#palette.keyword
+    let g:ayu#palette.import       = g:ayu#palette.accent
+endif
 
 " }}}
 
