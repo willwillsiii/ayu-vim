@@ -41,7 +41,6 @@ call ayu#hi('MoreMsg', 'string', '')
 call ayu#hi('NonText', 'guide_normal', '')
 call ayu#hi('Pmenu', 'fg', 'selection_inactive')
 call ayu#hi('PmenuSel', 'fg', 'selection_inactive', 'reverse')
-call ayu#hi('FloatBorder', 'fg', 'selection_inactive')
 call ayu#hi('Question', 'string', '')
 call ayu#hi('Search', 'bg', 'constant')
 call ayu#hi('SpecialKey', 'selection_inactive', '')
@@ -64,6 +63,13 @@ call ayu#hi('Conditional', 'conditional', '')
 call ayu#hi('Repeat', 'repeat', '')
 
 "}}}
+
+" Neovim Highlights:" {{{
+
+call ayu#hi('NormalFloat', 'fg', 'float_bg')
+call ayu#hi('FloatBorder', 'fg', 'float_bg')
+
+" }}}
 
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 
@@ -381,5 +387,11 @@ call ayu#hi('rubyModule', 'keyword', '')
 call ayu#hi('rubyRegexp', 'regexp', '')
 call ayu#hi('rubyRegexpDelimiter', 'regexp', '')
 call ayu#hi('rubyStringDelimiter', 'string', '')
+
+" }}}
+
+" Compe:" {{{
+
+hi! link CompeDocumentation NormalFloat
 
 " }}}
