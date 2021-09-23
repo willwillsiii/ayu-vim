@@ -186,6 +186,22 @@ call ayu#hi('NERDTreeDirSlash', 'special', '')
 call ayu#hi('TelescopeMatching', 'accent', '')
 " }}}
 
+" Neovim Diagnostics:" {{{
+call ayu#hi('DiagnosticDefaultError', 'error', '')
+call ayu#hi('DiagnosticUnderlineError', 'error', '', 'underline')
+call ayu#hi('DiagnosticSignError', 'error', s:sign_bg())
+
+call ayu#hi('DiagnosticDefaultWarn', 'warning', '')
+call ayu#hi('DiagnosticUnderlineWarn', 'warning', '', 'underline')
+call ayu#hi('DiagnosticSignWarn', 'warning', s:sign_bg())
+
+call ayu#hi('DiagnosticVirtualTextHint', 'fg_idle', '')
+call ayu#hi('DiagnosticSignHint', 'fg', s:sign_bg())
+
+call ayu#hi('DiagnosticVirtualTextInfo', 'fg_idle', '')
+call ayu#hi('DiagnosticSignInfo', 'fg', s:sign_bg())
+" }}}
+
 " Neovim Builtin LSP:" {{{
 call ayu#hi('LspDiagnosticsDefaultError', 'error', '')
 call ayu#hi('LspDiagnosticsUnderlineError', 'error', '', 'underline')
@@ -200,6 +216,8 @@ call ayu#hi('LspDiagnosticsSignHint', 'fg', s:sign_bg())
 
 call ayu#hi('LspDiagnosticsVirtualTextInformation', 'fg_idle', '')
 call ayu#hi('LspDiagnosticsSignInformation', 'fg', s:sign_bg())
+
+hi! link LspReferenceRead Visual
 " }}}
 
 " YATS:" {{{
