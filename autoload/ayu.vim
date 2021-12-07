@@ -86,8 +86,10 @@ function! ayu#hi(group_name, fg_color_name, bg_color_name, ...)
     let l:bg_color = a:bg_color_name !=# '' ? ayu#get_color(a:bg_color_name) : 'NONE'
     call add(l:highlights, 'guibg=' . l:bg_color)
 
-    let l:fmt = get(a:, '1')
-    call add(l:highlights, 'gui=' . (l:fmt !=# '0' && l:fmt !=# '' ? l:fmt : 'NONE'))
+    let l:fmt_arg = get(a:, '1')
+    let l:fmt = l:fmt_arg !=# '0' && l:fmt_arg !=# '' ? l:fmt_arg : 'NONE'
+    call add(l:highlights, 'gui=' . l:fmt)
+    call add(l:highlights, 'cterm=' . l:fmt)
 
     let l:cmd = join(l:highlights, ' ')
     execute l:cmd
