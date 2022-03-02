@@ -1,10 +1,8 @@
 ![ayu-vim](http://i.imgur.com/7vnF4Na.png)
 
-# Warning
-
-`ayu` is still in development and a lot of things need to be covered. Theme works only if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
-
 # Installation
+
+`ayu` only works if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
 
 ```VimL
 Plug 'Luxed/ayu-vim'    " or other package manager
@@ -57,17 +55,18 @@ And here is a list of other supported syntax groups:
 ```VimL
 let g:ayu_italic_comment = 1 " defaults to 0.
 let g:ayu_sign_contrast = 1 " defaults to 0. If set to 1, SignColumn and FoldColumn will have a higher contrast instead of using the Normal background
+let g:ayu_extended_palette = 1 " defaults to 0. If set, enables extended palette. Adds more colors to some highlights ("function" keyword, loops, conditionals, imports)
 ```
 
 # nvim-ts-rainbow Colors
 
-In your Tree-Sitter configuration add the following:
+In your Tree-Sitter configuration add the following (in lua):
 
 ```lua
 require('nvim-treesitter.configs').setup{
   rainbow = {
     enable = true,
-    colors = require('ayu').rainbow_colors
+    colors = require('ayu').rainbow_colors()
   }
 }
 ```
