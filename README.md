@@ -1,4 +1,7 @@
-![ayu-vim](http://i.imgur.com/7vnF4Na.png)
+![Ayu - Demonstration](https://user-images.githubusercontent.com/10234894/156596711-3a48210a-112d-4dc5-98ff-b1576be7ca28.png)
+
+With `let g:ayu_extended_palette = 1`:
+![Ayu - Extended color palette](https://user-images.githubusercontent.com/10234894/156596727-eb78d8c0-6aa5-42c4-8e25-64f9388dc765.png)
 
 # Installation
 
