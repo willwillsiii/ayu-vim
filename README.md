@@ -1,3 +1,8 @@
+![Ayu - Banner](https://user-images.githubusercontent.com/10234894/156601082-7c748734-2aa8-467a-8160-285815af3720.png)
+
+# Ayu vim (unofficial fork)
+
+From left to right `let ayucolor` = `light`, `mirage`, `dark`
 ![Ayu - Demonstration](https://user-images.githubusercontent.com/10234894/156596711-3a48210a-112d-4dc5-98ff-b1576be7ca28.png)
 
 With `let g:ayu_extended_palette = 1`:
