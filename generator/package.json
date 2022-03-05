@@ -1,0 +1,32 @@
+{
+  "name": "ayu-vim-generator",
+  "version": "0.1.0",
+  "description": "Generate ayu.vim file from the ayu package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "exec": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luxed/ayu-vim.git"
+  },
+  "keywords": [
+    "ayu",
+    "ayu-vim",
+    "theme",
+    "colorscheme",
+    "vim",
+    "neovim"
+  ],
+  "author": "Corentin Brunel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luxed/ayu-vim/issues"
+  },
+  "homepage": "https://github.com/Luxed/ayu-vim#readme",
+  "dependencies": {
+    "ayu": "^8.0.1"
+  }
+}
