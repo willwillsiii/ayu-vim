@@ -1,4 +1,6 @@
-" File automatically generated on 'Sun Mar 06 2022 14:02:49 GMT-0500 (Eastern Standard Time)'
+" DO NOT EDIT
+" This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
+" Generated on 'Sun Mar 06 2022 14:26:29 GMT-0500 (Eastern Standard Time)'
 
 let g:ayu#palette = {}
 let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}

@@ -2,7 +2,9 @@ import { light, mirage, dark } from 'ayu';
 import * as fs from 'fs';
 
 const currentDate = new Date();
-let fileContent = `" File automatically generated on '${currentDate}'\n\n`;
+let fileContent = `" DO NOT EDIT
+" This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
+" Generated on '${currentDate}'\n\n`;
 
 fileContent += 'let g:ayu#palette = {}\n';
 
