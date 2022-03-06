@@ -23,7 +23,7 @@ for (let group in light) {
 fileContent += '\n';
 fileContent += fs.readFileSync('./ayu.extended.vim');
 
-fs.writeFileSync('./ayu.vim', fileContent);
+fs.writeFileSync('../autoload/ayu.vim', fileContent);
 
 function getColorDict(group, color, state) {
     let lightHex, mirageHex, darkHex;
