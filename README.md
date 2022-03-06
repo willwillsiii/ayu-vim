@@ -3,10 +3,10 @@
 # Ayu vim (unofficial fork)
 
 From left to right `let ayucolor` = `light`, `mirage`, `dark`
-![Ayu - Demonstration](https://user-images.githubusercontent.com/10234894/156596711-3a48210a-112d-4dc5-98ff-b1576be7ca28.png)
+![Ayu - Demonstration](https://user-images.githubusercontent.com/10234894/156945507-ab1ef129-df1d-4633-ab1b-c89868ff7e73.png)
 
 With `let g:ayu_extended_palette = 1`:
-![Ayu - Extended color palette](https://user-images.githubusercontent.com/10234894/156596727-eb78d8c0-6aa5-42c4-8e25-64f9388dc765.png)
+![Ayu - Extended color palette](https://user-images.githubusercontent.com/10234894/156945599-85027644-b5ac-47d1-a70e-5896b8618b4f.png)
 
 # Installation
 
