@@ -1,6 +1,6 @@
 " DO NOT EDIT
 " This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
-" Generated on 'Sun Mar 06 2022 14:26:29 GMT-0500 (Eastern Standard Time)'
+" Generated on 'Sun Mar 06 2022 17:44:45 GMT-0500 (Eastern Standard Time)'
 
 let g:ayu#palette = {}
 let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}
@@ -50,10 +50,10 @@ if s:extended_palette
     let g:ayu#palette['extended_conditional']  = {'light': '#F9700C', 'mirage': '#FF8214', 'dark': '#FF710D'}
     let g:ayu#palette['extended_import']       = {'light': '#FF7E0D', 'mirage': '#FFBB33', 'dark': '#E0A123'}
 else
-    let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_repeat']       = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_conditional']  = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_import']       = g:ayu#palette['accent']
+    let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_repeat']       = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_conditional']  = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_import']       = g:ayu#palette['common_accent']
 endif
 
 function! ayu#get_style()

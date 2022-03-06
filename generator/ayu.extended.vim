@@ -10,10 +10,10 @@ if s:extended_palette
     let g:ayu#palette['extended_conditional']  = {'light': '#F9700C', 'mirage': '#FF8214', 'dark': '#FF710D'}
     let g:ayu#palette['extended_import']       = {'light': '#FF7E0D', 'mirage': '#FFBB33', 'dark': '#E0A123'}
 else
-    let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_repeat']       = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_conditional']  = g:ayu#palette['keyword']
-    let g:ayu#palette['extended_import']       = g:ayu#palette['accent']
+    let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_repeat']       = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_conditional']  = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_import']       = g:ayu#palette['common_accent']
 endif
 
 function! ayu#get_style()
