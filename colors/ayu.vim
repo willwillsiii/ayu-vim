@@ -42,8 +42,10 @@ call ayu#hi('NonText', 'editor_gutter_normal', '')
 call ayu#hi('Pmenu', 'editor_fg', 'ui_bg')
 call ayu#hi('PmenuSel', 'editor_fg', 'ui_bg', 'reverse')
 call ayu#hi('Question', 'syntax_string', '')
-" TODO: Use the 'editor_findMatch_active' background instead
-call ayu#hi('Search', 'editor_bg', 'syntax_constant')
+" TODO: This is what the theme should look like, but it might be more
+" difficult to see
+call ayu#hi('Search', '', 'editor_findMatch_inactive')
+call ayu#hi('IncSearch', '', 'editor_findMatch_active')
 call ayu#hi('SpecialKey', 'editor_selection_inactive', '')
 call ayu#hi('SpellCap', 'syntax_tag', '', 'underline')
 call ayu#hi('SpellLocal', 'syntax_keyword', '', 'underline')
