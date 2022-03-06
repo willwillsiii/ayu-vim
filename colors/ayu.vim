@@ -39,8 +39,8 @@ call ayu#hi('MatchParen', 'editor_fg', 'editor_bg', 'underline')
 call ayu#hi('ModeMsg', 'syntax_string', '')
 call ayu#hi('MoreMsg', 'syntax_string', '')
 call ayu#hi('NonText', 'editor_gutter_normal', '')
-call ayu#hi('Pmenu', 'editor_fg', 'editor_selection_inactive')
-call ayu#hi('PmenuSel', 'editor_fg', 'editor_selection_inactive', 'reverse')
+call ayu#hi('Pmenu', 'editor_fg', 'ui_bg')
+call ayu#hi('PmenuSel', 'editor_fg', 'ui_bg', 'reverse')
 call ayu#hi('Question', 'syntax_string', '')
 " TODO: Use the 'editor_findMatch_active' background instead
 call ayu#hi('Search', 'editor_bg', 'syntax_constant')
@@ -67,8 +67,8 @@ call ayu#hi('Repeat', 'extended_repeat', '')
 
 " Neovim Highlights:" {{{
 
-call ayu#hi('NormalFloat', 'editor_fg', 'extended_float_bg')
-call ayu#hi('FloatBorder', 'editor_fg', 'extended_float_bg')
+call ayu#hi('NormalFloat', 'editor_fg', 'ui_panel_bg')
+call ayu#hi('FloatBorder', 'editor_fg', 'ui_panel_bg')
 
 " }}}
 
