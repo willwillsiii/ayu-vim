@@ -43,6 +43,8 @@ Here is a list of plugins which have been customized to work better with this th
 - [haskell-vim](https://github.com/neovimhaskell/haskell-vim). Haskell syntax highlighting.
 - [nvim-compe](https://github.com/hrsh7th/nvim-compe). Neovim completion plugin.
 - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp). Neovim completion plugin, successor to compe.
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim). Indentation guides.
 
 And here is a list of other supported syntax groups:
 

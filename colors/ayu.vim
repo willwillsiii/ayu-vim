@@ -416,3 +416,17 @@ call ayu#hi('rubyStringDelimiter', 'syntax_string', '')
 hi! link CompeDocumentation NormalFloat
 
 " }}}
+
+" Cmp:" {{{
+
+call ayu#hi('CmpItemAbbrMatch', 'common_accent', '')
+call ayu#hi('CmpItemAbbrMatchFuzzy', 'common_accent', '')
+
+" }}}
+
+" Indent Blankline:" {{{
+
+call ayu#hi('IndentBlanklineChar', 'editor_indentGuide_normal', '')
+call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
+
+" }}}
