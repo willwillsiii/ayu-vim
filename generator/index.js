@@ -28,6 +28,10 @@ fs.writeFileSync('./ayu.vim', fileContent);
 function getColorDict(group, color, state) {
     let lightHex, mirageHex, darkHex;
     if (typeof state === 'undefined') {
+        // TODO: Blend is nice, but there are multiple backgrounds possible, it
+        // is possible that we do not use the same background in vim.
+        // Maybe we would need to blend it with the multiple possible
+        // backgrounds.
         lightHex = light[group][color].hex('blend');
         mirageHex = mirage[group][color].hex('blend');
         darkHex = dark[group][color].hex('blend');
