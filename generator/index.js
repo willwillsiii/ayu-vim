@@ -1,48 +1,43 @@
 import { light, mirage, dark } from 'ayu';
 import * as fs from 'fs';
 
-// TODO: Create the same structure as what was used before. It was simpler to
-// read and less verbose than this one.
-
 const currentDate = new Date();
-let fileContent = `" File automatically generated on '${currentDate}'
-let g:ayu#palette = {
-    \\    'light': {
-${getFileContentFromColorStyle(light)}
-    \\    },
-    \\    'mirage': {
-${getFileContentFromColorStyle(mirage)}
-    \\    },
-    \\    'dark': {
-${getFileContentFromColorStyle(dark)}
-    \\    }
-    \\}
+let fileContent = `" File automatically generated on '${currentDate}'\n\n`;
 
-`;
+fileContent += 'let g:ayu#palette = {}\n';
 
+for (let group in light) {
+    for (let color in light[group]) {
+        if (isClass(light[group][color])) { // Is a "Color" class
+            const letStatement = `let g:ayu#palette['${group}_${color}']`.padEnd(50, ' ');
+            fileContent += `${letStatement} = ${getColorDict(group, color)}\n`;
+        } else {
+            for (let state in light[group][color]) {
+                const letStatement = `let g:ayu#palette['${group}_${color}_${state}']`.padEnd(50, ' ');
+                fileContent += `${letStatement} = ${getColorDict(group, color, state)}\n`;
+            }
+        }
+    }
+}
+
+fileContent += '\n';
 fileContent += fs.readFileSync('./ayu.extended.vim');
 
 fs.writeFileSync('./ayu.vim', fileContent);
 
-function getFileContentFromColorStyle(colorStyle) {
-    let ret = '';
-    for (let group in colorStyle) {
-        for (let color in colorStyle[group]) {
-            if (isClass(colorStyle[group][color])) { // Is a "Color" class
-                const hex = colorStyle[group][color].hex('blend');
-                ret += `    \\        '${group}_${color}': '${hex}',\n`;
-            } else {
-                for (let state in colorStyle[group][color]) {
-                    const hex = colorStyle[group][color][state].hex('blend');
-                    ret += `    \\        '${group}_${state}_${color}': '${hex}',\n`;
-                }
-            }
-        }
+function getColorDict(group, color, state) {
+    let lightHex, mirageHex, darkHex;
+    if (typeof state === 'undefined') {
+        lightHex = light[group][color].hex('blend');
+        mirageHex = mirage[group][color].hex('blend');
+        darkHex = dark[group][color].hex('blend');
+    } else {
+        lightHex = light[group][color][state].hex('blend');
+        mirageHex = mirage[group][color][state].hex('blend');
+        darkHex = dark[group][color][state].hex('blend');
     }
 
-    ret = ret.slice(0, ret.length - 1);
-
-    return ret;
+    return `{'light': '${lightHex}', 'mirage': '${mirageHex}', 'dark': '${darkHex}'}`;
 }
 
 function isClass(obj) {
