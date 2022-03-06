@@ -9,16 +9,9 @@ let g:colors_name = "ayu"
 let s:ayu_sign_contrast = get(g:, 'ayu_sign_contrast', 0)
 let s:ayu_italic_comment = get(g:, 'ayu_italic_comment', 0)
 
+let s:sign_bg = s:ayu_sign_contrast ? 'ui_bg' : ''
+
 "}}}
-
-" Helper Functions:"{{{
-
-" TODO: Maybe look into using 'ui_bg' for more constrast?
-function! s:sign_bg()
-    return s:ayu_sign_contrast ? 'ui_panel_bg' : ''
-endfunction
-
-" }}}
 
 " Vim Highlighting: (see :help highlight-groups)"{{{
 
@@ -31,9 +24,9 @@ call ayu#hi('LineNr', 'editor_gutter_normal', '')
 call ayu#hi('Directory', 'syntax_func', '')
 call ayu#hi('ErrorMsg', 'editor_fg', 'common_error', 'standout')
 call ayu#hi('VertSplit', 'ui_panel_bg', 'ui_panel_bg')
-call ayu#hi('Folded', 'extended_fg_idle', 'ui_panel_bg')
-call ayu#hi('FoldColumn', '', s:sign_bg())
-call ayu#hi('SignColumn', '', s:sign_bg())
+call ayu#hi('Folded', 'extended_fg_idle', 'ui_bg')
+call ayu#hi('FoldColumn', '', s:sign_bg)
+call ayu#hi('SignColumn', '', s:sign_bg)
 
 call ayu#hi('MatchParen', 'editor_fg', 'editor_bg', 'underline')
 call ayu#hi('ModeMsg', 'syntax_string', '')
@@ -163,17 +156,17 @@ call ayu#hi('netrwClassify', 'syntax_special', '')
 " }}}
 
 " GitGutter:" {{{
-call ayu#hi('GitGutterAdd', 'vcs_added', s:sign_bg())
-call ayu#hi('GitGutterChange', 'vcs_modified', s:sign_bg())
-call ayu#hi('GitGutterDelete', 'vcs_removed', s:sign_bg())
-call ayu#hi('GitGutterChangeDelete', 'vcs_modified', s:sign_bg(), 'underline')
+call ayu#hi('GitGutterAdd', 'vcs_added', s:sign_bg)
+call ayu#hi('GitGutterChange', 'vcs_modified', s:sign_bg)
+call ayu#hi('GitGutterDelete', 'vcs_removed', s:sign_bg)
+call ayu#hi('GitGutterChangeDelete', 'vcs_modified', s:sign_bg, 'underline')
 " }}}
 
 " Signify:" {{{
-call ayu#hi('SignifySignAdd', 'vcs_added', s:sign_bg())
-call ayu#hi('SignifySignChange', 'vcs_modified', s:sign_bg())
-call ayu#hi('SignifySignDelete', 'vcs_removed', s:sign_bg())
-call ayu#hi('SignifySignChangeDelete', 'vcs_modified', s:sign_bg(), 'underline')
+call ayu#hi('SignifySignAdd', 'vcs_added', s:sign_bg)
+call ayu#hi('SignifySignChange', 'vcs_modified', s:sign_bg)
+call ayu#hi('SignifySignDelete', 'vcs_removed', s:sign_bg)
+call ayu#hi('SignifySignChangeDelete', 'vcs_modified', s:sign_bg, 'underline')
 " }}}
 
 " NERDTree:" {{{
@@ -192,33 +185,33 @@ call ayu#hi('TelescopeMatching', 'common_accent', '')
 " Neovim Diagnostics:" {{{
 call ayu#hi('DiagnosticDefaultError', 'common_error', '')
 call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
-call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg())
+call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
 
 call ayu#hi('DiagnosticDefaultWarn', 'extended_warning', '')
 call ayu#hi('DiagnosticUnderlineWarn', 'extended_warning', '', 'underline')
-call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg())
+call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg)
 
 call ayu#hi('DiagnosticVirtualTextHint', 'extended_fg_idle', '')
-call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg())
+call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg)
 
 call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
-call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg())
+call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
 " }}}
 
 " Neovim Builtin LSP:" {{{
 call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
 call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
-call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg())
+call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
 
 call ayu#hi('LspDiagnosticsDefaultWarning', 'extended_warning', '')
 call ayu#hi('LspDiagnosticsUnderlineWarning', 'extended_warning', '', 'underline')
-call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg())
+call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg)
 
 call ayu#hi('LspDiagnosticsVirtualTextHint', 'extended_fg_idle', '')
-call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg())
+call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg)
 
 call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
-call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg())
+call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
 
 hi! link LspReferenceRead Visual
 " }}}
