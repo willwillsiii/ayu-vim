@@ -415,6 +415,32 @@ hi! link CompeDocumentation NormalFloat
 call ayu#hi('CmpItemAbbrMatch', 'common_accent', '')
 call ayu#hi('CmpItemAbbrMatchFuzzy', 'common_accent', '')
 
+" Highlights for cmp item types
+call ayu#hi('CmpItemAbbrDeprecated', '', '', 'strikethrough')
+
+call ayu#hi('CmpItemKindInterface', 'syntax_entity', '')
+call ayu#hi('CmpItemKindClass', 'syntax_entity', '')
+call ayu#hi('CmpItemKindEnum', 'syntax_entity', '')
+call ayu#hi('CmpItemKindStruct', 'syntax_entity', '')
+
+call ayu#hi('CmpItemKindFunction', 'syntax_func', '')
+call ayu#hi('CmpItemKindMethod', 'syntax_func', '')
+
+call ayu#hi('CmpItemKindKeyword', 'syntax_keyword', '')
+call ayu#hi('CmpItemKindOperator', 'syntax_keyword', '')
+
+call ayu#hi('CmpItemKindProperty', 'syntax_tag', '')
+call ayu#hi('CmpItemKindField', 'syntax_tag', '')
+
+call ayu#hi('CmpItemKindText', 'syntax_comment', '')
+call ayu#hi('CmpItemKindSnippet', 'syntax_comment', '')
+
+call ayu#hi('CmpItemKindModule', 'extended_import', '')
+
+call ayu#hi('CmpItemKindConstant', 'syntax_constant', '')
+
+call ayu#hi('CmpItemKindConstructor', 'common_accent', '')
+
 " }}}
 
 " Indent Blankline:" {{{
