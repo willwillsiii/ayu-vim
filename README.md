@@ -1,10 +1,16 @@
-![ayu-vim](http://i.imgur.com/7vnF4Na.png)
+![Ayu - Banner](https://user-images.githubusercontent.com/10234894/156601082-7c748734-2aa8-467a-8160-285815af3720.png)
 
-# Warning
+# Ayu vim (unofficial fork)
 
-`ayu` is still in development and a lot of things need to be covered. Theme works only if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
+From left to right `let ayucolor` = `light`, `mirage`, `dark`
+![Ayu - Demonstration](https://user-images.githubusercontent.com/10234894/156596711-3a48210a-112d-4dc5-98ff-b1576be7ca28.png)
+
+With `let g:ayu_extended_palette = 1`:
+![Ayu - Extended color palette](https://user-images.githubusercontent.com/10234894/156596727-eb78d8c0-6aa5-42c4-8e25-64f9388dc765.png)
 
 # Installation
+
+`ayu` only works if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
 
 ```VimL
 Plug 'Luxed/ayu-vim'    " or other package manager
@@ -13,6 +19,7 @@ set termguicolors       " enable true colors support
 
 set background=light    " for light version of theme
 set background=dark     " for either mirage or dark version.
+" NOTE: `background` controls `g:ayucolor`, but `g:ayucolor` doesn't control `background`
 
 let g:ayucolor="mirage" " for mirage version of theme
 let g:ayucolor="dark"   " for dark version of theme
@@ -57,17 +64,18 @@ And here is a list of other supported syntax groups:
 ```VimL
 let g:ayu_italic_comment = 1 " defaults to 0.
 let g:ayu_sign_contrast = 1 " defaults to 0. If set to 1, SignColumn and FoldColumn will have a higher contrast instead of using the Normal background
+let g:ayu_extended_palette = 1 " defaults to 0. If set to 1, enables extended palette. Adds more colors to some highlights (function keyword, loops, conditionals, imports)
 ```
 
 # nvim-ts-rainbow Colors
 
-In your Tree-Sitter configuration add the following:
+In your Tree-Sitter configuration add the following (in lua):
 
 ```lua
 require('nvim-treesitter.configs').setup{
   rainbow = {
     enable = true,
-    colors = require('ayu').rainbow_colors
+    colors = require('ayu').rainbow_colors()
   }
 }
 ```
