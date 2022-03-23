@@ -1,71 +1,60 @@
+" DO NOT EDIT
+" This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
+" Generated on 'Sun Mar 06 2022 17:44:45 GMT-0500 (Eastern Standard Time)'
+
+let g:ayu#palette = {}
+let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}
+let g:ayu#palette['syntax_func']                   = {'light': '#f2ae49', 'mirage': '#ffd173', 'dark': '#ffb454'}
+let g:ayu#palette['syntax_entity']                 = {'light': '#399ee6', 'mirage': '#73d0ff', 'dark': '#59c2ff'}
+let g:ayu#palette['syntax_string']                 = {'light': '#86b300', 'mirage': '#d5ff80', 'dark': '#aad94c'}
+let g:ayu#palette['syntax_regexp']                 = {'light': '#4cbf99', 'mirage': '#95e6cb', 'dark': '#95e6cb'}
+let g:ayu#palette['syntax_markup']                 = {'light': '#f07171', 'mirage': '#f28779', 'dark': '#f07178'}
+let g:ayu#palette['syntax_keyword']                = {'light': '#fa8d3e', 'mirage': '#ffad66', 'dark': '#ff8f40'}
+let g:ayu#palette['syntax_special']                = {'light': '#e6ba7e', 'mirage': '#ffdfb3', 'dark': '#e6b673'}
+let g:ayu#palette['syntax_comment']                = {'light': '#adafb2', 'mirage': '#6e7c8e', 'dark': '#646b73'}
+let g:ayu#palette['syntax_constant']               = {'light': '#a37acc', 'mirage': '#dfbfff', 'dark': '#d2a6ff'}
+let g:ayu#palette['syntax_operator']               = {'light': '#ed9366', 'mirage': '#f29e74', 'dark': '#f29668'}
+let g:ayu#palette['vcs_added']                     = {'light': '#6cbf43', 'mirage': '#87d96c', 'dark': '#7fd962'}
+let g:ayu#palette['vcs_modified']                  = {'light': '#478acc', 'mirage': '#80bfff', 'dark': '#73b8ff'}
+let g:ayu#palette['vcs_removed']                   = {'light': '#ff7383', 'mirage': '#f27983', 'dark': '#f26d78'}
+let g:ayu#palette['editor_fg']                     = {'light': '#5c6166', 'mirage': '#cccac2', 'dark': '#bfbdb6'}
+let g:ayu#palette['editor_bg']                     = {'light': '#fcfcfc', 'mirage': '#242936', 'dark': '#0d1017'}
+let g:ayu#palette['editor_line']                   = {'light': '#f1f1f2', 'mirage': '#1a1f29', 'dark': '#131721'}
+let g:ayu#palette['editor_selection_active']       = {'light': '#d7e4f6', 'mirage': '#2b4768', 'dark': '#1c3b5d'}
+let g:ayu#palette['editor_selection_inactive']     = {'light': '#ebf1f9', 'mirage': '#283850', 'dark': '#142335'}
+let g:ayu#palette['editor_findMatch_active']       = {'light': '#ecdcfd', 'mirage': '#695380', 'dark': '#6c5980'}
+let g:ayu#palette['editor_findMatch_inactive']     = {'light': '#b266fe', 'mirage': '#403a54', 'dark': '#332d41'}
+let g:ayu#palette['editor_gutter_active']          = {'light': '#a1a6ad', 'mirage': '#767c85', 'dark': '#626976'}
+let g:ayu#palette['editor_gutter_normal']          = {'light': '#ced1d4', 'mirage': '#4d535e', 'dark': '#464b56'}
+let g:ayu#palette['editor_indentGuide_active']     = {'light': '#d4d7d9', 'mirage': '#484d59', 'dark': '#3d424c'}
+let g:ayu#palette['editor_indentGuide_normal']     = {'light': '#e7e9ea', 'mirage': '#363c48', 'dark': '#20242c'}
+let g:ayu#palette['ui_fg']                         = {'light': '#8a9199', 'mirage': '#707a8c', 'dark': '#565b66'}
+let g:ayu#palette['ui_bg']                         = {'light': '#f8f9fa', 'mirage': '#1f2430', 'dark': '#0b0e14'}
+let g:ayu#palette['ui_line']                       = {'light': '#e7eaed', 'mirage': '#171b24', 'dark': '#11151c'}
+let g:ayu#palette['ui_selection_active']           = {'light': '#e5e9ed', 'mirage': '#293040', 'dark': '#1a1f29'}
+let g:ayu#palette['ui_selection_normal']           = {'light': '#e7eaed', 'mirage': '#282e3b', 'dark': '#171c24'}
+let g:ayu#palette['ui_panel_bg']                   = {'light': '#f3f4f5', 'mirage': '#1c212b', 'dark': '#0f131a'}
+let g:ayu#palette['ui_panel_shadow']               = {'light': '#d3d4d4', 'mirage': '#161a22', 'dark': '#06070a'}
+let g:ayu#palette['common_accent']                 = {'light': '#ffaa33', 'mirage': '#ffcc66', 'dark': '#e6b450'}
+let g:ayu#palette['common_error']                  = {'light': '#e65050', 'mirage': '#ff6666', 'dark': '#d95757'}
+
 let s:extended_palette = get(g:, 'ayu_extended_palette', 0)
 
-" Official Palette:" {{{
-let g:ayu#palette = {}
-
-" common
-let g:ayu#palette.accent             = {'light': "#FF9940",  'mirage': "#FFCC66",  'dark': "#E6B450"}
-let g:ayu#palette.bg                 = {'light': "#FAFAFA",  'mirage': "#1F2430",  'dark': "#0A0E14"}
-let g:ayu#palette.fg                 = {'light': "#575F66",  'mirage': "#CBCCC6",  'dark': "#B3B1AD"}
-let g:ayu#palette.ui                 = {'light': "#8A9199",  'mirage': "#707A8C",  'dark': "#4D5566"}
-
-" syntax
-let g:ayu#palette.tag                = {'light': "#55B4D4",  'mirage': "#5CCFE6",  'dark': "#39BAE6"}
-let g:ayu#palette.func               = {'light': "#F2AE49",  'mirage': "#FFD580",  'dark': "#FFB454"}
-let g:ayu#palette.entity             = {'light': "#399EE6",  'mirage': "#73D0FF",  'dark': "#59C2FF"}
-let g:ayu#palette.string             = {'light': "#86B300",  'mirage': "#BAE67E",  'dark': "#C2D94C"}
-let g:ayu#palette.regexp             = {'light': "#4CBF99",  'mirage': "#95E6CB",  'dark': "#95E6CB"}
-let g:ayu#palette.markup             = {'light': "#F07171",  'mirage': "#F28779",  'dark': "#F07178"}
-let g:ayu#palette.keyword            = {'light': "#FA8D3E",  'mirage': "#FFA759",  'dark': "#FF8F40"}
-let g:ayu#palette.special            = {'light': "#E6BA7E",  'mirage': "#FFE6B3",  'dark': "#E6B673"}
-let g:ayu#palette.comment            = {'light': "#ABB0B6",  'mirage': "#5C6773",  'dark': "#626A73"}
-let g:ayu#palette.constant           = {'light': "#A37ACC",  'mirage': "#D4BFFF",  'dark': "#FFEE99"}
-let g:ayu#palette.operator           = {'light': "#ED9366",  'mirage': "#F29E74",  'dark': "#F29668"}
-let g:ayu#palette.error              = {'light': "#F51818",  'mirage': "#FF3333",  'dark': "#FF3333"}
-
-" ui
-" some of these colors should have transparency. Since this is not possible,
-" they only 'emulate' their colors as if they were shown on the regular
-" backaground color
-let g:ayu#palette.line               = {'light': "#EFF0F1",  'mirage': "#191E2A",  'dark': "#00010A"}
-let g:ayu#palette.panel_bg           = {'light': "#FFFFFF",  'mirage': "#232834",  'dark': "#0D1016"}
-let g:ayu#palette.panel_shadow       = {'light': "#CCCED0",  'mirage': "#141925",  'dark': "#00010A"}
-let g:ayu#palette.panel_border       = {'light': "#F0F0F0",  'mirage': "#101521",  'dark': "#000000"}
-let g:ayu#palette.gutter_normal      = {'light': "#CDD0D3",  'mirage': "#404755",  'dark': "#323945"}
-let g:ayu#palette.gutter_active      = {'light': "#A0A6AC",  'mirage': "#5F687A",  'dark': "#464D5E"}
-let g:ayu#palette.selection_bg       = {'light': "#D1E4F4",  'mirage': "#33415E",  'dark': "#273747"}
-let g:ayu#palette.selection_inactive = {'light': "#E7E8E9",  'mirage': "#323A4C",  'dark': "#1B2733"}
-let g:ayu#palette.selection_border   = {'light': "#E1E1E2",  'mirage': "#232A4C",  'dark': "#304357"}
-let g:ayu#palette.guide_active       = {'light': "#D3D5D8",  'mirage': "#576070",  'dark': "#393F4D"}
-let g:ayu#palette.guide_normal       = {'light': "#E6E7E9",  'mirage': "#383E4C",  'dark': "#242A35"}
-
-" vcs
-let g:ayu#palette.vcs_added          = {'light': "#99BF4D",  'mirage': "#A6CC70",  'dark': "#91B362"}
-let g:ayu#palette.vcs_modified       = {'light': "#709ECC",  'mirage': "#77A8D9",  'dark': "#6994BF"}
-let g:ayu#palette.vcs_removed        = {'light': "#F27983",  'mirage': "#F27983",  'dark': "#D96C75"}
-
-" TODO: Add 16 color palette for convenience
-" }}}
-
-" Extended Color Palette:" {{{
-
-let g:ayu#palette.fg_idle  = {'light': "#828C99", 'mirage': "#607080", 'dark': "#3E4B59"}
-let g:ayu#palette.warning  = {'light': "#FA8D3E", 'mirage': "#FFA759", 'dark': "#FF8F40"}
-let g:ayu#palette.float_bg = {'light': "#d8d8d8", 'mirage': "#2D323F", 'dark': "#161e26"}
+let g:ayu#palette['extended_fg_idle']          = {'light': '#828C99', 'mirage': '#607080', 'dark': '#3E4B59'}
+let g:ayu#palette['extended_warning']          = {'light': '#FA8D3E', 'mirage': '#FFA759', 'dark': '#FF8F40'}
+let g:ayu#palette['extended_float_bg']         = {'light': '#D8D8D8', 'mirage': '#2D323F', 'dark': '#161e26'}
 
 if s:extended_palette
-    let g:ayu#palette.keyword_func = {'light': "#3EABFA", 'mirage': "#80AAFF", 'dark': "#40B0FF"}
-    let g:ayu#palette.repeat       = {'light': "#FA3E4D", 'mirage': "#FF595E", 'dark': "#FF4051"}
-    let g:ayu#palette.conditional  = {'light': "#F9700C", 'mirage': "#FF8214", 'dark': "#FF710D"}
-    let g:ayu#palette.import       = {'light': "#FF7E0D", 'mirage': "#FFBB33", 'dark': "#E0A123"}
+    let g:ayu#palette['extended_keyword_func'] = {'light': '#3EABFA', 'mirage': '#80AAFF', 'dark': '#40B0FF'}
+    let g:ayu#palette['extended_repeat']       = {'light': '#FA3E4D', 'mirage': '#FF595E', 'dark': '#FF4051'}
+    let g:ayu#palette['extended_conditional']  = {'light': '#F9700C', 'mirage': '#FF8214', 'dark': '#FF710D'}
+    let g:ayu#palette['extended_import']       = {'light': '#FF7E0D', 'mirage': '#FFBB33', 'dark': '#E0A123'}
 else
-    let g:ayu#palette.keyword_func = g:ayu#palette.keyword
-    let g:ayu#palette.repeat       = g:ayu#palette.keyword
-    let g:ayu#palette.conditional  = g:ayu#palette.keyword
-    let g:ayu#palette.import       = g:ayu#palette.accent
+    let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_repeat']       = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_conditional']  = g:ayu#palette['syntax_keyword']
+    let g:ayu#palette['extended_import']       = g:ayu#palette['common_accent']
 endif
-
-" }}}
 
 function! ayu#get_style()
     return &background ==# 'dark' ? get(g:, 'ayucolor', 'dark') : &background
