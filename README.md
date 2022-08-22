@@ -46,6 +46,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp). Neovim completion plugin, successor to compe.
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim). Indentation guides.
 - [hlargs.nvim](https://github.com/m-demare/hlargs.nvim). Highlight arguments' definitions and usages.
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate). Automatically highlight other uses of the word under the cursor.
 
 And here is a list of other supported syntax groups:
 

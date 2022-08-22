@@ -453,3 +453,11 @@ call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
 hi! link Hlargs TSParameter
 
 " }}}
+
+" vim-illuminate:" {{{
+
+hi! link IlluminatedWordRead Visual
+hi! link IlluminatedWordText Visual
+call ayu#hi('IlluminatedWordWrite', '', 'editor_selection_active')
+
+" }}}
