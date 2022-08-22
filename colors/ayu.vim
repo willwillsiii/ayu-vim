@@ -447,3 +447,9 @@ call ayu#hi('IndentBlanklineChar', 'editor_indentGuide_normal', '')
 call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
 
 " }}}
+
+" hlargs.nvim:" {{{
+
+hi! link Hlargs TSParameter
+
+" }}}

@@ -45,6 +45,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp). Neovim completion plugin, successor to compe.
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim). Indentation guides.
+- [hlargs.nvim](https://github.com/m-demare/hlargs.nvim). Highlight arguments' definitions and usages.
 
 And here is a list of other supported syntax groups:
 
