@@ -461,3 +461,9 @@ hi! link IlluminatedWordText Visual
 call ayu#hi('IlluminatedWordWrite', '', 'editor_selection_active')
 
 " }}}
+
+" nvim-lspconfig:" {{{
+
+hi! link LspInfoBorder FloatBorder
+
+" }}}
