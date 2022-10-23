@@ -299,28 +299,30 @@ call ayu#hi('jsFunction', 'extended_keyword_func', '')
 
 " TreeSitter:" {{{
 
-call ayu#hi('@parameter', 'syntax_special', '')
-call ayu#hi('@field', 'syntax_tag', '')
-call ayu#hi('@property', 'syntax_tag', '')
-call ayu#hi('@attribute', 'syntax_markup', '')
-call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
-call ayu#hi('@constant.builtin', 'syntax_constant', '')
-call ayu#hi('@string.regex', 'syntax_regexp', '')
-call ayu#hi('@function.macro', 'syntax_func', '')
+if has('nvim')
+    call ayu#hi('@parameter', 'syntax_special', '')
+    call ayu#hi('@field', 'syntax_tag', '')
+    call ayu#hi('@property', 'syntax_tag', '')
+    call ayu#hi('@attribute', 'syntax_markup', '')
+    call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
+    call ayu#hi('@constant.builtin', 'syntax_constant', '')
+    call ayu#hi('@string.regex', 'syntax_regexp', '')
+    call ayu#hi('@function.macro', 'syntax_func', '')
 
-hi! link @text.uri Underlined
-hi! link @text.title Title
-hi! link @namespace Include
+    hi! link @text.uri Underlined
+    hi! link @text.title Title
+    hi! link @namespace Include
 
-call ayu#hi('@tag', 'syntax_keyword', '')
-hi! link @tag.delimiter Delimiter
-call ayu#hi('@tag.attribute', 'syntax_tag', '')
+    call ayu#hi('@tag', 'syntax_keyword', '')
+    hi! link @tag.delimiter Delimiter
+    call ayu#hi('@tag.attribute', 'syntax_tag', '')
 
-" Extended
-call ayu#hi('@include', 'extended_import', '')
-call ayu#hi('@keyword.function', 'extended_keyword_func', '')
-call ayu#hi('@repeat', 'extended_repeat', '')
-call ayu#hi('@conditional', 'extended_conditional', '')
+    " Extended
+    call ayu#hi('@include', 'extended_import', '')
+    call ayu#hi('@keyword.function', 'extended_keyword_func', '')
+    call ayu#hi('@repeat', 'extended_repeat', '')
+    call ayu#hi('@conditional', 'extended_conditional', '')
+endif
 
 " Deprecated:
 call ayu#hi('TSParameter', 'syntax_special', '')
