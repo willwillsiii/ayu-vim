@@ -300,28 +300,62 @@ call ayu#hi('jsFunction', 'extended_keyword_func', '')
 " TreeSitter:" {{{
 
 if has('nvim')
-    call ayu#hi('@parameter', 'syntax_special', '')
-    call ayu#hi('@field', 'syntax_tag', '')
-    call ayu#hi('@property', 'syntax_tag', '')
-    call ayu#hi('@attribute', 'syntax_markup', '')
     call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
+
+
+    hi! link @annotation PreProc
+    call ayu#hi('@attribute', 'syntax_markup', '')
+
+    call ayu#hi('@conditional', 'extended_conditional', '')
     call ayu#hi('@constant.builtin', 'syntax_constant', '')
-    call ayu#hi('@string.regex', 'syntax_regexp', '')
+
+    call ayu#hi('@field', 'syntax_tag', '')
+    hi! link @function.call @function
     call ayu#hi('@function.macro', 'syntax_func', '')
 
-    hi! link @text.uri Underlined
-    hi! link @text.title Title
+    call ayu#hi('@include', 'extended_import', '')
+
+    call ayu#hi('@keyword.function', 'extended_keyword_func', '')
+    hi! link @keyword.operator @operator
+    call ayu#hi('@keyword.return', 'extended_conditional', '')
+
+    hi! link @method.call @method
+
     hi! link @namespace Include
+
+    call ayu#hi('@parameter', 'syntax_special', '')
+    hi! link @parameter.reference @parameter
+    call ayu#hi('@property', 'syntax_tag', '')
+    hi! link @punctuation.delimiter @punctuation
+    hi! link @punctuation.bracket @punctuation
+    hi! link @punctuation.special @punctuation
+
+    call ayu#hi('@repeat', 'extended_repeat', '')
+
+    call ayu#hi('@string.regex', 'syntax_regexp', '')
+    hi! link @string.special SpecialChar
+    hi! link @symbol Identifier
 
     call ayu#hi('@tag', 'syntax_keyword', '')
     hi! link @tag.delimiter Delimiter
     call ayu#hi('@tag.attribute', 'syntax_tag', '')
 
-    " Extended
-    call ayu#hi('@include', 'extended_import', '')
-    call ayu#hi('@keyword.function', 'extended_keyword_func', '')
-    call ayu#hi('@repeat', 'extended_repeat', '')
-    call ayu#hi('@conditional', 'extended_conditional', '')
+    hi @text.strong gui=bold
+    hi @text.emphasis gui=italic
+    hi @text.underline gui=underline
+    hi @text.strike gui=strikethrough
+    hi! link @text.title Title
+    hi! link @text.literal String
+    hi! link @text.uri Underlined
+    hi! link @text.math Special
+    hi! link @text.reference Constant
+    hi! link @text.environment Macro
+    hi! link @text.environment.name Type
+    hi! link @text.note SpecialComment
+    hi! link @text.warning Todo
+    hi! link @text.danger WarningMsg
+    hi! link @type.builtin Type
+    hi! link @type.qualifier Type
 endif
 
 " Deprecated:
