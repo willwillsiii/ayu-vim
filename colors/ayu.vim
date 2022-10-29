@@ -374,7 +374,7 @@ call ayu#hi('TSStringRegex', 'syntax_regexp', '')
 call ayu#hi('TSFunction', 'syntax_func', '')
 call ayu#hi('TSFuncMacro', 'syntax_func', '')
 
-hi! TSTypeBuiltin Type
+hi! link TSTypeBuiltin Type
 
 " Extended
 call ayu#hi('TSInclude', 'extended_import', '')
