@@ -300,9 +300,6 @@ call ayu#hi('jsFunction', 'extended_keyword_func', '')
 " TreeSitter:" {{{
 
 if has('nvim')
-    call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
-
-
     hi! link @annotation PreProc
     call ayu#hi('@attribute', 'syntax_markup', '')
 
@@ -356,6 +353,8 @@ if has('nvim')
     hi! link @text.danger WarningMsg
     hi! link @type.builtin Type
     hi! link @type.qualifier Type
+    hi! link @variable NONE
+    call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
 endif
 
 " Deprecated:
