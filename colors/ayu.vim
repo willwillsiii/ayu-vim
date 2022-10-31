@@ -374,6 +374,7 @@ call ayu#hi('TSFunction', 'syntax_func', '')
 call ayu#hi('TSFuncMacro', 'syntax_func', '')
 
 hi! link TSTypeBuiltin Type
+hi! link TSMethodCall Function
 
 " Extended
 call ayu#hi('TSInclude', 'extended_import', '')
