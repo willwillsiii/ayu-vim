@@ -320,7 +320,7 @@ if has('nvim')
 
     hi! link @namespace Include
 
-    call ayu#hi('@parameter', 'syntax_special', '')
+    call ayu#hi('@parameter', 'extended_parameter', '')
     hi! link @parameter.reference @parameter
     call ayu#hi('@property', 'syntax_tag', '')
     hi! link @punctuation.delimiter @punctuation
@@ -358,8 +358,6 @@ if has('nvim')
 endif
 
 " Deprecated:
-call ayu#hi('TSParameter', 'syntax_special', '')
-
 call ayu#hi('TSField', 'syntax_tag', '')
 call ayu#hi('TSProperty', 'syntax_tag', '')
 
@@ -381,6 +379,7 @@ call ayu#hi('TSInclude', 'extended_import', '')
 call ayu#hi('TSKeywordFunction', 'extended_keyword_func', '')
 call ayu#hi('TSRepeat', 'extended_repeat', '')
 call ayu#hi('TSConditional', 'extended_conditional', '')
+call ayu#hi('TSParameter', 'extended_parameter', '')
 
 " }}}
 
