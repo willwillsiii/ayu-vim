@@ -534,7 +534,7 @@ hi! link LspInfoBorder FloatBorder
 "vim.api.nvim_set_hl(0, "NavicIconsFile",          {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsModule Include
 hi! link NavicIconsNamespace Include
-"vim.api.nvim_set_hl(0, "NavicIconsPackage",       {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsPackage Include
 hi! link NavicIconsClass Keyword
 hi! link NavicIconsMethod Function
 call ayu#hi('NavicIconsProperty', 'syntax_tag', '')
@@ -548,8 +548,8 @@ hi! link NavicIconsConstant Constant
 hi! link NavicIconsString String
 hi! link NavicIconsNumber Number
 hi! link NavicIconsBoolean Boolean
-"vim.api.nvim_set_hl(0, "NavicIconsArray",         {default = true, bg = "#000000", fg = "#ffffff"})
-"vim.api.nvim_set_hl(0, "NavicIconsObject",        {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsArray Operator
+hi! link NavicIconsObject Operator
 "vim.api.nvim_set_hl(0, "NavicIconsKey",           {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsNull Constant
 call ayu#hi('NavicIconsEnumMember', 'syntax_tag', '')
