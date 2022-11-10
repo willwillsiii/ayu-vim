@@ -48,6 +48,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [hlargs.nvim](https://github.com/m-demare/hlargs.nvim). Highlight arguments' definitions and usages.
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate). Automatically highlight other uses of the word under the cursor.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig). Neovim lsp config quickstart.
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic). Simple winbar/statusline plugin that shows your current code context.
 
 And here is a list of other supported syntax groups:
 

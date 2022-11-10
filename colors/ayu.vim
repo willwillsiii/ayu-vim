@@ -528,3 +528,36 @@ call ayu#hi('IlluminatedWordWrite', '', 'editor_selection_active')
 hi! link LspInfoBorder FloatBorder
 
 " }}}
+
+" nvim-navic:" {{{
+
+"vim.api.nvim_set_hl(0, "NavicIconsFile",          {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsModule Include
+hi! link NavicIconsNamespace Include
+"vim.api.nvim_set_hl(0, "NavicIconsPackage",       {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsClass Keyword
+hi! link NavicIconsMethod Function
+call ayu#hi('NavicIconsProperty', 'syntax_tag', '')
+call ayu#hi('NavicIconsField', 'syntax_tag', '')
+hi! link NavicIconsConstructor Special
+hi! link NavicIconsEnum Keyword
+hi! link NavicIconsInterface Keyword
+hi! link NavicIconsFunction Function
+call ayu#hi('NavicIconsVariable', 'editor_fg', '')
+hi! link NavicIconsConstant Constant
+hi! link NavicIconsString String
+hi! link NavicIconsNumber Number
+hi! link NavicIconsBoolean Boolean
+"vim.api.nvim_set_hl(0, "NavicIconsArray",         {default = true, bg = "#000000", fg = "#ffffff"})
+"vim.api.nvim_set_hl(0, "NavicIconsObject",        {default = true, bg = "#000000", fg = "#ffffff"})
+"vim.api.nvim_set_hl(0, "NavicIconsKey",           {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsNull Constant
+call ayu#hi('NavicIconsEnumMember', 'syntax_tag', '')
+hi! link NavicIconsStruct Keyword
+"vim.api.nvim_set_hl(0, "NavicIconsEvent",         {default = true, bg = "#000000", fg = "#ffffff"})
+hi! link NavicIconsOperator Operator
+call ayu#hi('NavicIconsTypeParameter', 'syntax_tag', '')
+hi! link NavicText Comment
+hi! link NavicSeparator Comment
+
+" }}}
