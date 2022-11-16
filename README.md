@@ -78,15 +78,6 @@ let g:ayu_extended_palette = 1 " defaults to 0. If set to 1, enables extended pa
 
 In your Tree-Sitter configuration add the following (in lua):
 
-Light:
-![image](https://user-images.githubusercontent.com/10234894/202318638-27ea1258-32cb-4327-bdfa-3eba2d85a323.png)
-
-Mirage:
-![image](https://user-images.githubusercontent.com/10234894/202318681-8a4f8837-94a6-49a5-8404-b264de3f01f6.png)
-
-Dark:
-![image](https://user-images.githubusercontent.com/10234894/202318748-d4057e18-1777-4096-bb1f-e0d62a3f7cf1.png)
-
 ```lua
 require('nvim-treesitter.configs').setup{
   rainbow = {
@@ -99,6 +90,15 @@ require('nvim-treesitter.configs').setup{
 # lualine.nvim configuration
 
 Add the following to your lualine configuration:
+
+Light:
+![image](https://user-images.githubusercontent.com/10234894/202318638-27ea1258-32cb-4327-bdfa-3eba2d85a323.png)
+
+Mirage:
+![image](https://user-images.githubusercontent.com/10234894/202318681-8a4f8837-94a6-49a5-8404-b264de3f01f6.png)
+
+Dark:
+![image](https://user-images.githubusercontent.com/10234894/202318748-d4057e18-1777-4096-bb1f-e0d62a3f7cf1.png)
 
 ~~~lua
 require('lualine').setup({
