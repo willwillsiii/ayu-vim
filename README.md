@@ -49,6 +49,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate). Automatically highlight other uses of the word under the cursor.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig). Neovim lsp config quickstart.
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic). Simple winbar/statusline plugin that shows your current code context.
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 And here is a list of other supported syntax groups:
 
@@ -63,7 +64,7 @@ And here is a list of other supported syntax groups:
 - INI.
 - Shell.
 - PHP.
-- Ruby
+- Ruby.
 
 # Options
 
@@ -73,9 +74,18 @@ let g:ayu_sign_contrast = 1 " defaults to 0. If set to 1, SignColumn and FoldCol
 let g:ayu_extended_palette = 1 " defaults to 0. If set to 1, enables extended palette. Adds more colors to some highlights (function keyword, loops, conditionals, imports)
 ```
 
-# nvim-ts-rainbow Colors
+# nvim-ts-rainbow configuration
 
 In your Tree-Sitter configuration add the following (in lua):
+
+Light:
+![image](https://user-images.githubusercontent.com/10234894/202318638-27ea1258-32cb-4327-bdfa-3eba2d85a323.png)
+
+Mirage:
+![image](https://user-images.githubusercontent.com/10234894/202318681-8a4f8837-94a6-49a5-8404-b264de3f01f6.png)
+
+Dark:
+![image](https://user-images.githubusercontent.com/10234894/202318748-d4057e18-1777-4096-bb1f-e0d62a3f7cf1.png)
 
 ```lua
 require('nvim-treesitter.configs').setup{
@@ -85,6 +95,18 @@ require('nvim-treesitter.configs').setup{
   }
 }
 ```
+
+# lualine.nvim configuration
+
+Add the following to your lualine configuration:
+
+~~~lua
+require('lualine').setup({
+  options = {
+    theme = require('ayu').lualine_colors()
+  }
+})
+~~~
 
 # Customize The Theme To Your Liking
 
