@@ -87,9 +87,9 @@ require('nvim-treesitter.configs').setup{
 }
 ```
 
-# lualine.nvim configuration
+# Custom [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) theme
 
-Add the following to your lualine configuration:
+(This theme is automatically applied)
 
 Light:
 ![image](https://user-images.githubusercontent.com/10234894/202318638-27ea1258-32cb-4327-bdfa-3eba2d85a323.png)
@@ -99,14 +99,6 @@ Mirage:
 
 Dark:
 ![image](https://user-images.githubusercontent.com/10234894/202318748-d4057e18-1777-4096-bb1f-e0d62a3f7cf1.png)
-
-~~~lua
-require('lualine').setup({
-  options = {
-    theme = require('ayu').lualine_colors()
-  }
-})
-~~~
 
 # Customize The Theme To Your Liking
 
