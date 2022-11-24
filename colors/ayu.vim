@@ -25,6 +25,8 @@ call ayu#hi('Directory', 'syntax_func', '')
 call ayu#hi('ErrorMsg', 'editor_fg', 'common_error', 'standout')
 call ayu#hi('VertSplit', 'ui_panel_bg', 'ui_panel_bg')
 call ayu#hi('Folded', 'extended_fg_idle', 'ui_bg')
+hi! FoldColumn NONE
+hi! SignColumn NONE
 call ayu#hi('FoldColumn', '', s:sign_bg)
 call ayu#hi('SignColumn', '', s:sign_bg)
 
