@@ -565,3 +565,11 @@ hi! link NavicText Comment
 hi! link NavicSeparator Comment
 
 " }}}
+
+" CoC.nvim: {{{
+
+hi! link CocInlayHint Comment
+call ayu#hi('CocSearch', 'common_accent', '')
+hi! link CocSemVariable NONE
+
+" }}}

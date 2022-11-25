@@ -50,6 +50,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig). Neovim lsp config quickstart.
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic). Simple winbar/statusline plugin that shows your current code context.
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 And here is a list of other supported syntax groups:
 
