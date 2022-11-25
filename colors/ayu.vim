@@ -234,7 +234,7 @@ call ayu#hi('typescriptTry', 'syntax_markup', '')
 call ayu#hi('typescriptExceptions', 'syntax_markup', '')
 call ayu#hi('typescriptDebugger', 'syntax_markup', '', 'bold')
 call ayu#hi('typescriptParens', 'syntax_special', '')
-"call ayu#hi('typescriptVariable', 'syntax_keyword', '')
+call ayu#hi('typescriptVariable', 'syntax_keyword', '')
 call ayu#hi('typescriptObjectLabel', 'syntax_tag', '')
 call ayu#hi('typescriptOperator', 'syntax_keyword', '')
 call ayu#hi('typescriptArrowFunc', 'syntax_operator', '')
@@ -270,6 +270,8 @@ call ayu#hi('typescriptConditional', 'extended_conditional', '')
 call ayu#hi('typescriptCase', 'extended_conditional', '')
 call ayu#hi('typescriptRepeat', 'extended_repeat', '')
 call ayu#hi('typescriptBranch', 'extended_repeat', '')
+call ayu#hi('typescriptCall', 'extended_parameter', '')
+call ayu#hi('typescriptArrowFuncArg', 'extended_parameter', '')
 
 " }}}
 
