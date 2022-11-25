@@ -1,4 +1,4 @@
-" Initialisation:"{{{
+" Initialisation: {{{
 
 hi clear
 if exists("syntax_on")
@@ -13,7 +13,7 @@ let s:sign_bg = s:ayu_sign_contrast ? 'ui_bg' : ''
 
 "}}}
 
-" Vim Highlighting: (see :help highlight-groups)"{{{
+" Vim Highlighting: (see :help highlight-groups) {{{
 
 call ayu#hi('Normal', 'editor_fg', 'editor_bg')
 call ayu#hi('ColorColumn', '', 'editor_line')
@@ -60,14 +60,14 @@ call ayu#hi('Repeat', 'extended_repeat', '')
 
 "}}}
 
-" Neovim Highlights:" {{{
+" Neovim Highlights: {{{
 
 call ayu#hi('NormalFloat', 'editor_fg', 'ui_panel_bg')
 call ayu#hi('FloatBorder', 'editor_fg', 'ui_panel_bg')
 
 " }}}
 
-" Generic Syntax Highlighting: (see :help group-name)"{{{
+" Generic Syntax Highlighting: (see :help group-name) {{{
 
 call ayu#hi('Comment', 'syntax_comment', '', s:ayu_italic_comment ? 'italic' : '')
 
@@ -142,7 +142,7 @@ endif
 
 " }}}
 
-" Diff Syntax Highlighting:"{{{
+" Diff Syntax Highlighting: {{{
 call ayu#hi('DiffAdd', 'vcs_added', 'editor_gutter_normal')
 call ayu#hi('DiffAdded', 'vcs_added', '')
 call ayu#hi('DiffChange', 'vcs_modified', 'editor_gutter_normal')
@@ -151,25 +151,25 @@ call ayu#hi('DiffRemoved', 'vcs_removed', '')
 call ayu#hi('DiffText', 'vcs_modified', 'editor_gutter_active')
 "}}}
 
-" Netrw:" {{{
+" Netrw: {{{
 call ayu#hi('netrwClassify', 'syntax_special', '')
 " }}}
 
-" GitGutter:" {{{
+" GitGutter: {{{
 call ayu#hi('GitGutterAdd', 'vcs_added', s:sign_bg)
 call ayu#hi('GitGutterChange', 'vcs_modified', s:sign_bg)
 call ayu#hi('GitGutterDelete', 'vcs_removed', s:sign_bg)
 call ayu#hi('GitGutterChangeDelete', 'vcs_modified', s:sign_bg, 'underline')
 " }}}
 
-" Signify:" {{{
+" Signify: {{{
 call ayu#hi('SignifySignAdd', 'vcs_added', s:sign_bg)
 call ayu#hi('SignifySignChange', 'vcs_modified', s:sign_bg)
 call ayu#hi('SignifySignDelete', 'vcs_removed', s:sign_bg)
 call ayu#hi('SignifySignChangeDelete', 'vcs_modified', s:sign_bg, 'underline')
 " }}}
 
-" NERDTree:" {{{
+" NERDTree: {{{
 call ayu#hi('NERDTreeOpenable', 'extended_fg_idle', '')
 call ayu#hi('NERDTreeClosable', 'common_accent', '')
 call ayu#hi('NERDTreeUp', 'extended_fg_idle', '')
@@ -178,11 +178,11 @@ call ayu#hi('NERDTreeFile', '', '')
 call ayu#hi('NERDTreeDirSlash', 'syntax_special', '')
 " }}}
 
-" Telescope:"{{{
+" Telescope: {{{
 call ayu#hi('TelescopeMatching', 'common_accent', '')
 " }}}
 
-" Neovim Diagnostics:" {{{
+" Neovim Diagnostics: {{{
 call ayu#hi('DiagnosticDefaultError', 'common_error', '')
 call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
 call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
@@ -198,7 +198,7 @@ call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
 call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
 " }}}
 
-" Neovim Builtin LSP:" {{{
+" Neovim Builtin LSP: {{{
 call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
 call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
 call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
@@ -216,7 +216,7 @@ call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
 hi! link LspReferenceRead Visual
 " }}}
 
-" YATS:" {{{
+" YATS: {{{
 
 call ayu#hi('typescriptDecorator', 'syntax_markup', '')
 call ayu#hi('typescriptImport', 'extended_import', '')
@@ -273,7 +273,7 @@ call ayu#hi('typescriptBranch', 'extended_repeat', '')
 
 " }}}
 
-" Javascript:" {{{
+" Javascript: {{{
 
 call ayu#hi('jsNull', 'syntax_constant', '')
 call ayu#hi('jsThis', 'syntax_constant', '', 'italic')
@@ -299,7 +299,7 @@ call ayu#hi('jsFunction', 'extended_keyword_func', '')
 
 " }}}
 
-" TreeSitter:" {{{
+" TreeSitter: {{{
 
 if has('nvim')
     hi! link @annotation PreProc
@@ -385,32 +385,32 @@ call ayu#hi('TSParameter', 'extended_parameter', '')
 
 " }}}
 
-" Fugitive:" {{{
+" Fugitive: {{{
 call ayu#hi('fugitiveUntrackedHeading', 'common_accent', '')
 call ayu#hi('fugitiveUnstagedHeading', 'common_accent', '')
 call ayu#hi('fugitiveStagedHeading', 'common_accent', '')
 call ayu#hi('fugitiveHeading', 'common_accent', '')
 " }}}
 
-" Git Commit:" {{{
+" Git Commit: {{{
 call ayu#hi('gitcommitBranch', 'syntax_func', '')
 call ayu#hi('gitcommitHeader', 'common_accent', '')
 call ayu#hi('gitcommitSummary', 'editor_fg', '')
 call ayu#hi('gitcommitOverflow', 'syntax_markup', '')
 " }}}
 
-" Startify:" {{{
+" Startify: {{{
 call ayu#hi('StartifyFile', 'editor_fg', '')
 " }}}
 
-" Vim:" {{{
+" Vim: {{{
 call ayu#hi('vimUserFunc', 'syntax_func', '')
 hi! link vimVar NONE
 call ayu#hi('vimFunction', 'syntax_func', '')
 call ayu#hi('vimIsCommand', '', '')
 " }}}
 
-" XML:" {{{
+" XML: {{{
 
 call ayu#hi('xmlTag', 'syntax_special', '')
 call ayu#hi('xmlTagName', 'syntax_keyword', '')
@@ -420,11 +420,11 @@ call ayu#hi('xmlEqual', 'syntax_operator', '')
 
 " }}}
 
-" INI:" {{{
+" INI: {{{
 call ayu#hi('dosiniHeader', 'syntax_keyword', '')
 " }}}
 
-" Pandoc:" {{{
+" Pandoc: {{{
 
 call ayu#hi('pandocPipeTableHeader', 'syntax_keyword', '')
 call ayu#hi('pandocPipeTableDelims', 'syntax_keyword', '')
@@ -432,7 +432,7 @@ call ayu#hi('pandocDelimitedCodeBlock', 'common_accent', '')
 
 " }}}
 
-" Shell:" {{{
+" Shell: {{{
 
 call ayu#hi('shTestOpr', 'syntax_operator', '')
 call ayu#hi('shOption', 'syntax_special', '')
@@ -440,7 +440,7 @@ call ayu#hi('shQuote', 'syntax_string', '')
 
 " }}}
 
-" Haskell:" {{{
+" Haskell: {{{
 
 call ayu#hi('haskellDeclKeyword', 'syntax_keyword', '')
 call ayu#hi('haskellLet', 'syntax_keyword', '')
@@ -449,14 +449,14 @@ call ayu#hi('haskellIdentifier', 'syntax_tag', '')
 
 " }}}
 
-" PHP:" {{{
+" PHP: {{{
 
 call ayu#hi('phpDefine', 'syntax_keyword', '')
 call ayu#hi('phpStructure', 'syntax_keyword', '')
 
 " }}}
 
-" Ruby:" {{{
+" Ruby: {{{
 
 call ayu#hi('rubyModule', 'syntax_keyword', '')
 call ayu#hi('rubyRegexp', 'syntax_regexp', '')
@@ -465,13 +465,13 @@ call ayu#hi('rubyStringDelimiter', 'syntax_string', '')
 
 " }}}
 
-" Compe:" {{{
+" Compe: {{{
 
 hi! link CompeDocumentation NormalFloat
 
 " }}}
 
-" Cmp:" {{{
+" Cmp: {{{
 
 call ayu#hi('CmpItemAbbrMatch', 'common_accent', '')
 call ayu#hi('CmpItemAbbrMatchFuzzy', 'common_accent', '')
@@ -504,20 +504,20 @@ call ayu#hi('CmpItemKindConstructor', 'common_accent', '')
 
 " }}}
 
-" Indent Blankline:" {{{
+" Indent Blankline: {{{
 
 call ayu#hi('IndentBlanklineChar', 'editor_indentGuide_normal', '')
 call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
 
 " }}}
 
-" hlargs.nvim:" {{{
+" hlargs.nvim: {{{
 
 hi! link Hlargs TSParameter
 
 " }}}
 
-" vim-illuminate:" {{{
+" vim-illuminate: {{{
 
 hi! link IlluminatedWordRead Visual
 hi! link IlluminatedWordText Visual
@@ -525,13 +525,13 @@ call ayu#hi('IlluminatedWordWrite', '', 'editor_selection_active')
 
 " }}}
 
-" nvim-lspconfig:" {{{
+" nvim-lspconfig: {{{
 
 hi! link LspInfoBorder FloatBorder
 
 " }}}
 
-" nvim-navic:" {{{
+" nvim-navic: {{{
 
 "vim.api.nvim_set_hl(0, "NavicIconsFile",          {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsModule Include
