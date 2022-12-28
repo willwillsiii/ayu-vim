@@ -214,6 +214,17 @@ call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
 call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
 
 hi! link LspReferenceRead Visual
+
+if has('nvim')
+    hi! link @struct Type
+    hi! link @interface Type
+    hi! link @enum Type
+    hi! link @builtinType Type
+    hi! link @class Type
+
+    call ayu#hi('@controlFlow', 'extended_conditional', '')
+endif
+
 " }}}
 
 " YATS: {{{
