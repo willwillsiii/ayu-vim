@@ -1,6 +1,9 @@
+
 return {
   rainbow_colors = function()
-    local style = vim.fn['ayu#get_style']()
+    -- local style = vim.fn['ayu#get_style']()
+    -- local style = vim.o.background ~= 'dark'
+    local style = 'mirage'
     if style == 'light' then
       return {
         '#F0D5AF',
