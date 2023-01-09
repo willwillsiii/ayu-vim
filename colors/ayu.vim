@@ -182,36 +182,38 @@ call ayu#hi('NERDTreeDirSlash', 'syntax_special', '')
 call ayu#hi('TelescopeMatching', 'common_accent', '')
 " }}}
 
-" Neovim Diagnostics: {{{
-call ayu#hi('DiagnosticDefaultError', 'common_error', '')
-call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
-call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
+" Neovim: {{{
+if has('nvim-0.6')
+    call ayu#hi('DiagnosticDefaultError', 'common_error', '')
+    hi! link DiagnosticError DiagnosticDefaultError
+    call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
+    call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
 
-call ayu#hi('DiagnosticDefaultWarn', 'extended_warning', '')
-call ayu#hi('DiagnosticUnderlineWarn', 'extended_warning', '', 'underline')
-call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg)
+    call ayu#hi('DiagnosticWarn', 'extended_warning', '')
+    call ayu#hi('DiagnosticDefaultWarn', 'extended_warning', '')
+    call ayu#hi('DiagnosticUnderlineWarn', 'extended_warning', '', 'underline')
+    call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg)
 
-call ayu#hi('DiagnosticVirtualTextHint', 'extended_fg_idle', '')
-call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg)
+    call ayu#hi('DiagnosticVirtualTextHint', 'extended_fg_idle', '')
+    call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg)
 
-call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
-call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
-" }}}
+    call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
+    call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
+else
+    call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
+    call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
+    call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
 
-" Neovim Builtin LSP: {{{
-call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
-call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
-call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
+    call ayu#hi('LspDiagnosticsDefaultWarning', 'extended_warning', '')
+    call ayu#hi('LspDiagnosticsUnderlineWarning', 'extended_warning', '', 'underline')
+    call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg)
 
-call ayu#hi('LspDiagnosticsDefaultWarning', 'extended_warning', '')
-call ayu#hi('LspDiagnosticsUnderlineWarning', 'extended_warning', '', 'underline')
-call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg)
+    call ayu#hi('LspDiagnosticsVirtualTextHint', 'extended_fg_idle', '')
+    call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg)
 
-call ayu#hi('LspDiagnosticsVirtualTextHint', 'extended_fg_idle', '')
-call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg)
-
-call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
-call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
+    call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
+    call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
+endif
 
 hi! link LspReferenceRead Visual
 
