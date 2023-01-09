@@ -367,7 +367,7 @@ if has('nvim')
     hi! link @text.warning Todo
     hi! link @text.danger WarningMsg
     hi! link @type.builtin Type
-    hi! link @type.qualifier Type
+    hi! link @type.qualifier Keyword
     hi! link @variable NONE
     call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
 endif
