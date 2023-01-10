@@ -38,6 +38,7 @@ call ayu#hi('Pmenu', 'editor_fg', 'ui_bg')
 call ayu#hi('PmenuSel', '', 'ui_selection_active')
 call ayu#hi('Question', 'syntax_string', '')
 call ayu#hi('Search', '', 'editor_findMatch_inactive')
+call ayu#hi('Include', 'extended_namespace', '')
 call ayu#hi('IncSearch', '', 'editor_findMatch_active')
 call ayu#hi('SpecialKey', 'editor_selection_inactive', '')
 call ayu#hi('SpellCap', 'syntax_tag', '', 'underline')
@@ -218,9 +219,10 @@ endif
 hi! link LspReferenceRead Visual
 
 if has('nvim')
-    hi! link @struct Type
-    hi! link @interface Type
-    hi! link @enum Type
+    call ayu#hi('@struct', 'extended_struct', '')
+    call ayu#hi('@interface', 'extended_interface', '')
+    call ayu#hi('@enum', 'extended_enum', '')
+    call ayu#hi('@typeParameter', 'extended_generic', '')
     hi! link @builtinType Type
     hi! link @class Type
 
