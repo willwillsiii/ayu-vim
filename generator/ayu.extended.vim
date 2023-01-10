@@ -23,25 +23,15 @@ function! ayu#get_style()
 endfunction
 
 function! ayu#get_color(color_name)
-    let l:style = ayu#get_style()
-
-    return g:ayu#palette[a:color_name][l:style]
+    return g:ayu#palette[a:color_name][ayu#get_style()]
 endfunction
 
 function! ayu#hi(group_name, fg_color_name, bg_color_name, ...)
-    let l:highlights = ['hi!', a:group_name]
-
     let l:fg_color = a:fg_color_name !=# '' ? ayu#get_color(a:fg_color_name) : 'NONE'
-    call add(l:highlights, 'guifg=' . l:fg_color)
-
     let l:bg_color = a:bg_color_name !=# '' ? ayu#get_color(a:bg_color_name) : 'NONE'
-    call add(l:highlights, 'guibg=' . l:bg_color)
 
     let l:fmt_arg = get(a:, '1')
     let l:fmt = l:fmt_arg !=# '0' && l:fmt_arg !=# '' ? l:fmt_arg : 'NONE'
-    call add(l:highlights, 'gui=' . l:fmt)
-    call add(l:highlights, 'cterm=' . l:fmt)
 
-    let l:cmd = join(l:highlights, ' ')
-    execute l:cmd
+    execute join(['hi!', a:group_name, 'guifg=' . l:fg_color, 'guibg=' . l:bg_color, 'gui=' . l:fmt, 'cterm=' . l:fmt], ' ')
 endfunction
