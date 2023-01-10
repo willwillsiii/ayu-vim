@@ -517,6 +517,8 @@ call ayu#hi('CmpItemKindConstant', 'syntax_constant', '')
 
 call ayu#hi('CmpItemKindConstructor', 'common_accent', '')
 
+call ayu#hi('CmpItemKindVariable', 'editor_fg', '')
+
 " }}}
 
 " Indent Blankline: {{{
