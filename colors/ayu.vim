@@ -496,29 +496,23 @@ call ayu#hi('CmpItemAbbrMatchFuzzy', 'common_accent', '')
 " Highlights for cmp item types
 call ayu#hi('CmpItemAbbrDeprecated', '', '', 'strikethrough')
 
-call ayu#hi('CmpItemKindInterface', 'syntax_entity', '')
 call ayu#hi('CmpItemKindClass', 'syntax_entity', '')
-call ayu#hi('CmpItemKindEnum', 'syntax_entity', '')
-call ayu#hi('CmpItemKindStruct', 'syntax_entity', '')
-
-call ayu#hi('CmpItemKindFunction', 'syntax_func', '')
-call ayu#hi('CmpItemKindMethod', 'syntax_func', '')
-
-call ayu#hi('CmpItemKindKeyword', 'syntax_keyword', '')
-call ayu#hi('CmpItemKindOperator', 'syntax_keyword', '')
-
-call ayu#hi('CmpItemKindProperty', 'syntax_tag', '')
-call ayu#hi('CmpItemKindField', 'syntax_tag', '')
-
-call ayu#hi('CmpItemKindText', 'syntax_comment', '')
-call ayu#hi('CmpItemKindSnippet', 'syntax_comment', '')
-
-call ayu#hi('CmpItemKindModule', 'extended_import', '')
-
 call ayu#hi('CmpItemKindConstant', 'syntax_constant', '')
-
 call ayu#hi('CmpItemKindConstructor', 'common_accent', '')
-
+call ayu#hi('CmpItemKindEnum', 'extended_enum', '')
+call ayu#hi('CmpItemKindEnumMember', 'syntax_constant', '')
+call ayu#hi('CmpItemKindField', 'syntax_tag', '')
+call ayu#hi('CmpItemKindFunction', 'syntax_func', '')
+call ayu#hi('CmpItemKindInterface', 'extended_interface', '')
+call ayu#hi('CmpItemKindKeyword', 'syntax_keyword', '')
+call ayu#hi('CmpItemKindMethod', 'syntax_func', '')
+call ayu#hi('CmpItemKindModule', 'extended_namespace', '')
+call ayu#hi('CmpItemKindOperator', 'syntax_keyword', '')
+call ayu#hi('CmpItemKindProperty', 'syntax_tag', '')
+call ayu#hi('CmpItemKindSnippet', 'syntax_comment', '')
+call ayu#hi('CmpItemKindStruct', 'extended_struct', '')
+call ayu#hi('CmpItemKindText', 'syntax_comment', '')
+call ayu#hi('CmpItemKindTypeParameter', 'extended_generic', '')
 call ayu#hi('CmpItemKindVariable', 'editor_fg', '')
 
 " }}}
@@ -561,8 +555,9 @@ hi! link NavicIconsMethod Function
 call ayu#hi('NavicIconsProperty', 'syntax_tag', '')
 call ayu#hi('NavicIconsField', 'syntax_tag', '')
 hi! link NavicIconsConstructor Special
-hi! link NavicIconsEnum Keyword
-hi! link NavicIconsInterface Keyword
+call ayu#hi('NavicIconsEnum', 'extended_enum', '')
+hi! link NavicIconsEnumMember Constant
+call ayu#hi('NavicIconsInterface', 'extended_interface', '')
 hi! link NavicIconsFunction Function
 call ayu#hi('NavicIconsVariable', 'editor_fg', '')
 hi! link NavicIconsConstant Constant
@@ -573,11 +568,10 @@ hi! link NavicIconsArray Operator
 hi! link NavicIconsObject Operator
 "vim.api.nvim_set_hl(0, "NavicIconsKey",           {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsNull Constant
-call ayu#hi('NavicIconsEnumMember', 'syntax_tag', '')
-hi! link NavicIconsStruct Keyword
+call ayu#hi('NavicIconsStruct', 'extended_struct', '')
 "vim.api.nvim_set_hl(0, "NavicIconsEvent",         {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsOperator Operator
-call ayu#hi('NavicIconsTypeParameter', 'syntax_tag', '')
+call ayu#hi('NavicIconsTypeParameter', 'extended_generic', '')
 hi! link NavicText Comment
 hi! link NavicSeparator Comment
 
