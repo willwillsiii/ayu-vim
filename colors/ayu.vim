@@ -579,8 +579,16 @@ hi! link NavicSeparator Comment
 
 " CoC.nvim: {{{
 
-hi! link CocInlayHint Comment
+call ayu#hi('CocInlayHint', 'extended_fg_idle', '', 'italic')
 call ayu#hi('CocSearch', 'common_accent', '')
-hi! link CocSemVariable NONE
+
+call ayu#hi('CocSemVariable', 'editor_fg', '')
+call ayu#hi('CocSemInterface', 'extended_interface', '')
+call ayu#hi('CocSemStruct', 'extended_struct', '')
+call ayu#hi('CocSemParameter', 'extended_parameter', '')
+call ayu#hi('CocSemTypeParameter', 'extended_generic', '')
+call ayu#hi('CocSemEnum', 'extended_enum', '')
+call ayu#hi('CocSemProperty', 'syntax_tag', '')
+call ayu#hi('CocSemRegexp', 'syntax_regexp', '')
 
 " }}}
