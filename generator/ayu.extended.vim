@@ -13,7 +13,7 @@ if s:extended_palette
 
     let g:ayu#palette['extended_enum']      = {'light': '#729BFF', 'mirage': '#91B6FF', 'dark': '#8CB1FF'}
     let g:ayu#palette['extended_interface'] = {'light': '#5FCFCF', 'mirage': '#70E6D2', 'dark': '#85EAEE'}
-    let g:ayu#palette['extended_struct']    = {'light': '#32CFA7', 'mirage': '#6AE693', 'dark': '#8FDC91'}
+    let g:ayu#palette['extended_struct']    = {'light': '#2081C5', 'mirage': '#77B6E4', 'dark': '#50ABE0'}
     let g:ayu#palette['extended_generic']   = {'light': '#998CC3', 'mirage': '#AABBEE', 'dark': '#8F8FFF'}
     let g:ayu#palette['extended_namespace'] = {'light': '#F2976F', 'mirage': '#FFA375', 'dark': '#FFB179'}
 else

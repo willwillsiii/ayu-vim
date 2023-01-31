@@ -1,6 +1,6 @@
 " DO NOT EDIT
 " This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
-" Generated on 'Tue Jan 10 2023 18:27:31 GMT-0500 (Eastern Standard Time)'
+" Generated on 'Tue Jan 31 2023 11:09:12 GMT-0500 (Eastern Standard Time)'
 
 let g:ayu#palette = {}
 let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}
@@ -53,7 +53,7 @@ if s:extended_palette
 
     let g:ayu#palette['extended_enum']      = {'light': '#729BFF', 'mirage': '#91B6FF', 'dark': '#8CB1FF'}
     let g:ayu#palette['extended_interface'] = {'light': '#5FCFCF', 'mirage': '#70E6D2', 'dark': '#85EAEE'}
-    let g:ayu#palette['extended_struct']    = {'light': '#32CFA7', 'mirage': '#6AE693', 'dark': '#8FDC91'}
+    let g:ayu#palette['extended_struct']    = {'light': '#2081C5', 'mirage': '#77B6E4', 'dark': '#50ABE0'}
     let g:ayu#palette['extended_generic']   = {'light': '#998CC3', 'mirage': '#AABBEE', 'dark': '#8F8FFF'}
     let g:ayu#palette['extended_namespace'] = {'light': '#F2976F', 'mirage': '#FFA375', 'dark': '#FFB179'}
 else
