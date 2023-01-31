@@ -592,3 +592,9 @@ call ayu#hi('CocSemProperty', 'syntax_tag', '')
 call ayu#hi('CocSemRegexp', 'syntax_regexp', '')
 
 " }}}
+
+" Rust: {{{
+
+call ayu#hi('rustRepeat', 'extended_repeat', '')
+
+" }}}
