@@ -12,7 +12,7 @@ With `let g:ayu_extended_palette = 1`:
 
 `ayu` only works if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
 
-```VimL
+```vim
 Plug 'Luxed/ayu-vim'    " or other package manager
 "...
 set termguicolors       " enable true colors support
@@ -49,7 +49,6 @@ Here is a list of plugins which have been customized to work better with this th
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate). Automatically highlight other uses of the word under the cursor.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig). Neovim lsp config quickstart.
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic). Simple winbar/statusline plugin that shows your current code context.
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 And here is a list of other supported syntax groups:
@@ -69,7 +68,7 @@ And here is a list of other supported syntax groups:
 
 # Options
 
-```VimL
+```vim
 let g:ayu_italic_comment = 1 " defaults to 0.
 let g:ayu_sign_contrast = 1 " defaults to 0. If set to 1, SignColumn and FoldColumn will have a higher contrast instead of using the Normal background
 let g:ayu_extended_palette = 1 " defaults to 0. If set to 1, enables extended palette. Adds more colors to some highlights (function keyword, loops, conditionals, imports)
@@ -88,9 +87,18 @@ require('nvim-treesitter.configs').setup{
 }
 ```
 
-# Custom [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) theme
+# Statusline support
 
-(This theme is automatically applied)
+Currently, the ayu-vim theme supports the following statusline plugins:
+
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
+  No setup is required. The theme is automatically applied.
+- [vim-airline](https://github.com/vim-airline/vim-airline).
+  No setup is required, but it is important to note that the ayu theme included in [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes) will override the one present here.
+- [lightline.vim](https://github.com/itchyny/lightline.vim).
+  Add the following to your config (or modify your current lightline config): `let g:lightline = { 'colorscheme': 'ayu' }`
+
+This is an example for `lualine.nvim`:
 
 Light:
 ![image](https://user-images.githubusercontent.com/10234894/202318638-27ea1258-32cb-4327-bdfa-3eba2d85a323.png)
@@ -103,7 +111,7 @@ Dark:
 
 # Customize The Theme To Your Liking
 
-```VimL
+```vim
 function! s:custom_ayu_colors()
   " Put whatever highlights you want here.
   " The ayu#hi function is defined as followed:
