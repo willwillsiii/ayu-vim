@@ -370,7 +370,7 @@ if has('nvim')
     hi! link @text.note SpecialComment
     hi! link @text.warning Todo
     hi! link @text.danger WarningMsg
-    hi! link @type.builtin Type
+    call ayu#hi('@type.builtin', 'syntax_entity', '', 'italic')
     hi! link @type.qualifier Keyword
     call ayu#hi('@variable', 'editor_fg', '')
     call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
