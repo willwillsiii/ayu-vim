@@ -38,6 +38,7 @@ call ayu#hi('Pmenu', 'editor_fg', 'ui_bg')
 call ayu#hi('PmenuSel', '', 'ui_selection_active')
 call ayu#hi('Question', 'syntax_string', '')
 call ayu#hi('Search', '', 'editor_findMatch_inactive')
+call ayu#hi('Include', 'extended_namespace', '', 'bold')
 call ayu#hi('IncSearch', '', 'editor_findMatch_active')
 call ayu#hi('SpecialKey', 'editor_selection_inactive', '')
 call ayu#hi('SpellCap', 'syntax_tag', '', 'underline')
@@ -182,53 +183,6 @@ call ayu#hi('NERDTreeDirSlash', 'syntax_special', '')
 call ayu#hi('TelescopeMatching', 'common_accent', '')
 " }}}
 
-" Neovim: {{{
-if has('nvim-0.6')
-    call ayu#hi('DiagnosticDefaultError', 'common_error', '')
-    hi! link DiagnosticError DiagnosticDefaultError
-    call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
-    call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
-
-    call ayu#hi('DiagnosticWarn', 'extended_warning', '')
-    call ayu#hi('DiagnosticDefaultWarn', 'extended_warning', '')
-    call ayu#hi('DiagnosticUnderlineWarn', 'extended_warning', '', 'underline')
-    call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg)
-
-    call ayu#hi('DiagnosticVirtualTextHint', 'extended_fg_idle', '')
-    call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg)
-
-    call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
-    call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
-else
-    call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
-    call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
-    call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
-
-    call ayu#hi('LspDiagnosticsDefaultWarning', 'extended_warning', '')
-    call ayu#hi('LspDiagnosticsUnderlineWarning', 'extended_warning', '', 'underline')
-    call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg)
-
-    call ayu#hi('LspDiagnosticsVirtualTextHint', 'extended_fg_idle', '')
-    call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg)
-
-    call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
-    call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
-endif
-
-hi! link LspReferenceRead Visual
-
-if has('nvim')
-    hi! link @struct Type
-    hi! link @interface Type
-    hi! link @enum Type
-    hi! link @builtinType Type
-    hi! link @class Type
-
-    call ayu#hi('@controlFlow', 'extended_conditional', '')
-endif
-
-" }}}
-
 " YATS: {{{
 
 call ayu#hi('typescriptDecorator', 'syntax_markup', '')
@@ -311,92 +265,6 @@ call ayu#hi('jsArrowFunction', 'syntax_operator', '')
 
 " Extended
 call ayu#hi('jsFunction', 'extended_keyword_func', '')
-
-" }}}
-
-" TreeSitter: {{{
-
-if has('nvim')
-    hi! link @annotation PreProc
-    call ayu#hi('@attribute', 'syntax_markup', '')
-
-    call ayu#hi('@conditional', 'extended_conditional', '')
-    call ayu#hi('@constant.builtin', 'syntax_constant', '')
-
-    call ayu#hi('@field', 'syntax_tag', '')
-    hi! link @function.call @function
-    call ayu#hi('@function.macro', 'syntax_func', '')
-
-    call ayu#hi('@include', 'extended_import', '')
-
-    call ayu#hi('@keyword.function', 'extended_keyword_func', '')
-    hi! link @keyword.operator @operator
-    call ayu#hi('@keyword.return', 'extended_conditional', '')
-
-    hi! link @method.call @method
-
-    hi! link @namespace Include
-
-    call ayu#hi('@parameter', 'extended_parameter', '')
-    hi! link @parameter.reference @parameter
-    call ayu#hi('@property', 'syntax_tag', '')
-    hi! link @punctuation.delimiter @punctuation
-    hi! link @punctuation.bracket @punctuation
-    hi! link @punctuation.special @punctuation
-
-    call ayu#hi('@repeat', 'extended_repeat', '')
-
-    call ayu#hi('@string.regex', 'syntax_regexp', '')
-    hi! link @string.special SpecialChar
-    hi! link @symbol Identifier
-
-    call ayu#hi('@tag', 'syntax_keyword', '')
-    hi! link @tag.delimiter Delimiter
-    call ayu#hi('@tag.attribute', 'syntax_tag', '')
-
-    hi @text.strong gui=bold
-    hi @text.emphasis gui=italic
-    hi @text.underline gui=underline
-    hi @text.strike gui=strikethrough
-    hi! link @text.title Title
-    hi! link @text.literal String
-    hi! link @text.uri Underlined
-    hi! link @text.math Special
-    hi! link @text.reference Constant
-    hi! link @text.environment Macro
-    hi! link @text.environment.name Type
-    hi! link @text.note SpecialComment
-    hi! link @text.warning Todo
-    hi! link @text.danger WarningMsg
-    hi! link @type.builtin Type
-    hi! link @type.qualifier Keyword
-    hi! link @variable NONE
-    call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
-endif
-
-" Deprecated:
-call ayu#hi('TSField', 'syntax_tag', '')
-call ayu#hi('TSProperty', 'syntax_tag', '')
-
-call ayu#hi('TSAttribute', 'syntax_markup', '')
-
-call ayu#hi('TSVariableBuiltin', 'syntax_constant', '', 'italic')
-call ayu#hi('TSConstBuiltin', 'syntax_constant', '')
-
-call ayu#hi('TSStringRegex', 'syntax_regexp', '')
-
-call ayu#hi('TSFunction', 'syntax_func', '')
-call ayu#hi('TSFuncMacro', 'syntax_func', '')
-
-hi! link TSTypeBuiltin Type
-hi! link TSMethodCall Function
-
-" Extended
-call ayu#hi('TSInclude', 'extended_import', '')
-call ayu#hi('TSKeywordFunction', 'extended_keyword_func', '')
-call ayu#hi('TSRepeat', 'extended_repeat', '')
-call ayu#hi('TSConditional', 'extended_conditional', '')
-call ayu#hi('TSParameter', 'extended_parameter', '')
 
 " }}}
 
@@ -494,29 +362,23 @@ call ayu#hi('CmpItemAbbrMatchFuzzy', 'common_accent', '')
 " Highlights for cmp item types
 call ayu#hi('CmpItemAbbrDeprecated', '', '', 'strikethrough')
 
-call ayu#hi('CmpItemKindInterface', 'syntax_entity', '')
 call ayu#hi('CmpItemKindClass', 'syntax_entity', '')
-call ayu#hi('CmpItemKindEnum', 'syntax_entity', '')
-call ayu#hi('CmpItemKindStruct', 'syntax_entity', '')
-
-call ayu#hi('CmpItemKindFunction', 'syntax_func', '')
-call ayu#hi('CmpItemKindMethod', 'syntax_func', '')
-
-call ayu#hi('CmpItemKindKeyword', 'syntax_keyword', '')
-call ayu#hi('CmpItemKindOperator', 'syntax_keyword', '')
-
-call ayu#hi('CmpItemKindProperty', 'syntax_tag', '')
-call ayu#hi('CmpItemKindField', 'syntax_tag', '')
-
-call ayu#hi('CmpItemKindText', 'syntax_comment', '')
-call ayu#hi('CmpItemKindSnippet', 'syntax_comment', '')
-
-call ayu#hi('CmpItemKindModule', 'extended_import', '')
-
 call ayu#hi('CmpItemKindConstant', 'syntax_constant', '')
-
 call ayu#hi('CmpItemKindConstructor', 'common_accent', '')
-
+call ayu#hi('CmpItemKindEnum', 'extended_enum', '')
+call ayu#hi('CmpItemKindEnumMember', 'syntax_constant', '')
+call ayu#hi('CmpItemKindField', 'syntax_tag', '')
+call ayu#hi('CmpItemKindFunction', 'syntax_func', '')
+call ayu#hi('CmpItemKindInterface', 'extended_interface', '')
+call ayu#hi('CmpItemKindKeyword', 'syntax_keyword', '')
+call ayu#hi('CmpItemKindMethod', 'syntax_func', '')
+call ayu#hi('CmpItemKindModule', 'extended_namespace', '')
+call ayu#hi('CmpItemKindOperator', 'syntax_keyword', '')
+call ayu#hi('CmpItemKindProperty', 'syntax_tag', '')
+call ayu#hi('CmpItemKindSnippet', 'syntax_comment', '')
+call ayu#hi('CmpItemKindStruct', 'extended_struct', '')
+call ayu#hi('CmpItemKindText', 'syntax_comment', '')
+call ayu#hi('CmpItemKindTypeParameter', 'extended_generic', '')
 call ayu#hi('CmpItemKindVariable', 'editor_fg', '')
 
 " }}}
@@ -530,7 +392,7 @@ call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
 
 " hlargs.nvim: {{{
 
-hi! link Hlargs TSParameter
+hi! link Hlargs @parameter
 
 " }}}
 
@@ -559,8 +421,9 @@ hi! link NavicIconsMethod Function
 call ayu#hi('NavicIconsProperty', 'syntax_tag', '')
 call ayu#hi('NavicIconsField', 'syntax_tag', '')
 hi! link NavicIconsConstructor Special
-hi! link NavicIconsEnum Keyword
-hi! link NavicIconsInterface Keyword
+call ayu#hi('NavicIconsEnum', 'extended_enum', '')
+hi! link NavicIconsEnumMember Constant
+call ayu#hi('NavicIconsInterface', 'extended_interface', '')
 hi! link NavicIconsFunction Function
 call ayu#hi('NavicIconsVariable', 'editor_fg', '')
 hi! link NavicIconsConstant Constant
@@ -571,11 +434,10 @@ hi! link NavicIconsArray Operator
 hi! link NavicIconsObject Operator
 "vim.api.nvim_set_hl(0, "NavicIconsKey",           {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsNull Constant
-call ayu#hi('NavicIconsEnumMember', 'syntax_tag', '')
-hi! link NavicIconsStruct Keyword
+call ayu#hi('NavicIconsStruct', 'extended_struct', '')
 "vim.api.nvim_set_hl(0, "NavicIconsEvent",         {default = true, bg = "#000000", fg = "#ffffff"})
 hi! link NavicIconsOperator Operator
-call ayu#hi('NavicIconsTypeParameter', 'syntax_tag', '')
+call ayu#hi('NavicIconsTypeParameter', 'extended_generic', '')
 hi! link NavicText Comment
 hi! link NavicSeparator Comment
 
@@ -583,8 +445,148 @@ hi! link NavicSeparator Comment
 
 " CoC.nvim: {{{
 
-hi! link CocInlayHint Comment
+call ayu#hi('CocInlayHint', 'extended_fg_idle', '', 'italic')
 call ayu#hi('CocSearch', 'common_accent', '')
-hi! link CocSemVariable NONE
+
+call ayu#hi('CocSemVariable', 'editor_fg', '')
+call ayu#hi('CocSemInterface', 'extended_interface', '')
+call ayu#hi('CocSemStruct', 'extended_struct', '')
+call ayu#hi('CocSemParameter', 'extended_parameter', '')
+call ayu#hi('CocSemTypeParameter', 'extended_generic', '')
+call ayu#hi('CocSemEnum', 'extended_enum', '')
+call ayu#hi('CocSemProperty', 'syntax_tag', '')
+call ayu#hi('CocSemRegexp', 'syntax_regexp', '')
+
+" }}}
+
+" Rust: {{{
+
+call ayu#hi('rustRepeat', 'extended_repeat', '')
+
+" }}}
+
+" Neovim: {{{
+
+if has('nvim')
+    " Diagnostics:
+    if has('nvim-0.6')
+        call ayu#hi('DiagnosticDefaultError', 'common_error', '')
+        hi! link DiagnosticError DiagnosticDefaultError
+        call ayu#hi('DiagnosticUnderlineError', 'common_error', '', 'underline')
+        call ayu#hi('DiagnosticSignError', 'common_error', s:sign_bg)
+
+        call ayu#hi('DiagnosticWarn', 'extended_warning', '')
+        call ayu#hi('DiagnosticDefaultWarn', 'extended_warning', '')
+        call ayu#hi('DiagnosticUnderlineWarn', 'extended_warning', '', 'underline')
+        call ayu#hi('DiagnosticSignWarn', 'extended_warning', s:sign_bg)
+
+        call ayu#hi('DiagnosticVirtualTextHint', 'extended_fg_idle', '')
+        call ayu#hi('DiagnosticSignHint', 'editor_fg', s:sign_bg)
+
+        call ayu#hi('DiagnosticVirtualTextInfo', 'extended_fg_idle', '')
+        call ayu#hi('DiagnosticSignInfo', 'editor_fg', s:sign_bg)
+    else
+        call ayu#hi('LspDiagnosticsDefaultError', 'common_error', '')
+        call ayu#hi('LspDiagnosticsUnderlineError', 'common_error', '', 'underline')
+        call ayu#hi('LspDiagnosticsSignError', 'common_error', s:sign_bg)
+
+        call ayu#hi('LspDiagnosticsDefaultWarning', 'extended_warning', '')
+        call ayu#hi('LspDiagnosticsUnderlineWarning', 'extended_warning', '', 'underline')
+        call ayu#hi('LspDiagnosticsSignWarning', 'extended_warning', s:sign_bg)
+
+        call ayu#hi('LspDiagnosticsVirtualTextHint', 'extended_fg_idle', '')
+        call ayu#hi('LspDiagnosticsSignHint', 'editor_fg', s:sign_bg)
+
+        call ayu#hi('LspDiagnosticsVirtualTextInformation', 'extended_fg_idle', '')
+        call ayu#hi('LspDiagnosticsSignInformation', 'editor_fg', s:sign_bg)
+    endif
+
+    hi! link LspReferenceRead Visual
+
+    call ayu#hi('@struct', 'extended_struct', '')
+    call ayu#hi('@interface', 'extended_interface', '')
+    call ayu#hi('@enum', 'extended_enum', '')
+    call ayu#hi('@typeParameter', 'extended_generic', '')
+    hi! link @builtinType Type
+    hi! link @class Type
+
+    call ayu#hi('@controlFlow', 'extended_conditional', '')
+    hi! link @annotation PreProc
+    call ayu#hi('@attribute', 'syntax_markup', '')
+
+    call ayu#hi('@conditional', 'extended_conditional', '')
+    call ayu#hi('@constant.builtin', 'syntax_constant', '')
+
+    call ayu#hi('@field', 'syntax_tag', '')
+    hi! link @function.call @function
+    call ayu#hi('@function.macro', 'syntax_func', '')
+
+    call ayu#hi('@include', 'extended_import', '')
+
+    call ayu#hi('@keyword.function', 'extended_keyword_func', '')
+    hi! link @keyword.operator @operator
+    call ayu#hi('@keyword.return', 'extended_conditional', '')
+
+    hi! link @method.call @method
+
+    hi! link @namespace Include
+
+    call ayu#hi('@parameter', 'extended_parameter', '')
+    hi! link @parameter.reference @parameter
+    call ayu#hi('@property', 'syntax_tag', '')
+    hi! link @punctuation.delimiter @punctuation
+    hi! link @punctuation.bracket @punctuation
+    hi! link @punctuation.special @punctuation
+
+    call ayu#hi('@repeat', 'extended_repeat', '')
+
+    hi! link @storageclass Keyword
+    call ayu#hi('@string.regex', 'syntax_regexp', '')
+    hi! link @string.special SpecialChar
+    hi! link @symbol Identifier
+
+    call ayu#hi('@tag', 'syntax_keyword', '')
+    hi! link @tag.delimiter Delimiter
+    call ayu#hi('@tag.attribute', 'syntax_tag', '')
+
+    hi @text.strong gui=bold
+    hi @text.emphasis gui=italic
+    hi @text.underline gui=underline
+    hi @text.strike gui=strikethrough
+    hi! link @text.title Title
+    hi! link @text.literal String
+    hi! link @text.uri Underlined
+    hi! link @text.math Special
+    hi! link @text.reference Constant
+    hi! link @text.environment Macro
+    hi! link @text.environment.name Type
+    hi! link @text.note SpecialComment
+    call ayu#hi('@text.todo.checked.markdown', 'vcs_added', '', '')
+    call ayu#hi('@text.todo.unchecked.markdown', 'vcs_removed', '', '')
+    hi! link @text.warning Todo
+    hi! link @text.danger WarningMsg
+    call ayu#hi('@type.builtin', 'syntax_entity', '', 'italic')
+    hi! link @builtinType @type.builtin
+    hi! link @type.qualifier Keyword
+    call ayu#hi('@variable', 'editor_fg', '')
+    call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
+
+    " Builtin LSP
+
+    hi! link @lsp.type.namespace @namespace
+    hi! link @lsp.type.class @class
+    hi! link @lsp.type.interface @interface
+    hi! link @lsp.type.enum @enum
+    hi! link @lsp.type.typeParameter @typeParameter
+    hi! link @lsp.type.parameter @parameter
+    hi! link @lsp.type.property @property
+    hi! link @lsp.type.field @property
+    hi! link @lsp.type.struct @struct
+    hi! link @lsp.type.variable @variable
+    hi! link @lsp.type.keyword Keyword
+    hi! link @lsp.type.constant Constant
+    hi! link @lsp.type.delegate @function
+    hi! link @lsp.type.conditional @conditional
+endif
 
 " }}}

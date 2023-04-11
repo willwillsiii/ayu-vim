@@ -1,6 +1,6 @@
 " DO NOT EDIT
 " This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
-" Generated on 'Mon Nov 07 2022 13:02:14 GMT-0500 (Eastern Standard Time)'
+" Generated on 'Tue Jan 31 2023 11:09:12 GMT-0500 (Eastern Standard Time)'
 
 let g:ayu#palette = {}
 let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}
@@ -38,11 +38,11 @@ let g:ayu#palette['ui_panel_shadow']               = {'light': '#d3d4d4', 'mirag
 let g:ayu#palette['common_accent']                 = {'light': '#ffaa33', 'mirage': '#ffcc66', 'dark': '#e6b450'}
 let g:ayu#palette['common_error']                  = {'light': '#e65050', 'mirage': '#ff6666', 'dark': '#d95757'}
 
-let s:extended_palette = get(g:, 'ayu_extended_palette', 0)
-
 let g:ayu#palette['extended_fg_idle']          = {'light': '#828C99', 'mirage': '#607080', 'dark': '#3E4B59'}
 let g:ayu#palette['extended_warning']          = {'light': '#FA8D3E', 'mirage': '#FFA759', 'dark': '#FF8F40'}
 let g:ayu#palette['extended_float_bg']         = {'light': '#D8D8D8', 'mirage': '#2D323F', 'dark': '#161e26'}
+
+let s:extended_palette = get(g:, 'ayu_extended_palette', 0)
 
 if s:extended_palette
     let g:ayu#palette['extended_keyword_func'] = {'light': '#3EABFA', 'mirage': '#80AAFF', 'dark': '#40B0FF'}
@@ -50,12 +50,24 @@ if s:extended_palette
     let g:ayu#palette['extended_conditional']  = {'light': '#F9700C', 'mirage': '#FF8214', 'dark': '#FF710D'}
     let g:ayu#palette['extended_import']       = {'light': '#FF7E0D', 'mirage': '#FFBB33', 'dark': '#E0A123'}
     let g:ayu#palette['extended_parameter']    = {'light': '#252729', 'mirage': '#DDEEE8', 'dark': '#ebeae6'}
+
+    let g:ayu#palette['extended_enum']      = {'light': '#729BFF', 'mirage': '#91B6FF', 'dark': '#8CB1FF'}
+    let g:ayu#palette['extended_interface'] = {'light': '#5FCFCF', 'mirage': '#70E6D2', 'dark': '#85EAEE'}
+    let g:ayu#palette['extended_struct']    = {'light': '#71B9ED', 'mirage': '#9DDEFF', 'dark': '#8BD4FF'}
+    let g:ayu#palette['extended_generic']   = {'light': '#998CC3', 'mirage': '#AABBEE', 'dark': '#8F8FFF'}
+    let g:ayu#palette['extended_namespace'] = {'light': '#F2976F', 'mirage': '#FFA375', 'dark': '#FFB179'}
 else
     let g:ayu#palette['extended_keyword_func'] = g:ayu#palette['syntax_keyword']
     let g:ayu#palette['extended_repeat']       = g:ayu#palette['syntax_keyword']
     let g:ayu#palette['extended_conditional']  = g:ayu#palette['syntax_keyword']
     let g:ayu#palette['extended_import']       = g:ayu#palette['common_accent']
-    let g:ayu#palette['extended_parameter'] = g:ayu#palette['syntax_special']
+    let g:ayu#palette['extended_parameter']    = g:ayu#palette['syntax_special']
+
+    let g:ayu#palette['extended_enum']      = g:ayu#palette['syntax_entity']
+    let g:ayu#palette['extended_interface'] = g:ayu#palette['syntax_entity']
+    let g:ayu#palette['extended_struct']    = g:ayu#palette['syntax_entity']
+    let g:ayu#palette['extended_generic']   = g:ayu#palette['syntax_entity']
+    let g:ayu#palette['extended_namespace'] = g:ayu#palette['common_accent']
 endif
 
 function! ayu#get_style()
@@ -63,25 +75,15 @@ function! ayu#get_style()
 endfunction
 
 function! ayu#get_color(color_name)
-    let l:style = ayu#get_style()
-
-    return g:ayu#palette[a:color_name][l:style]
+    return g:ayu#palette[a:color_name][ayu#get_style()]
 endfunction
 
 function! ayu#hi(group_name, fg_color_name, bg_color_name, ...)
-    let l:highlights = ['hi!', a:group_name]
-
     let l:fg_color = a:fg_color_name !=# '' ? ayu#get_color(a:fg_color_name) : 'NONE'
-    call add(l:highlights, 'guifg=' . l:fg_color)
-
     let l:bg_color = a:bg_color_name !=# '' ? ayu#get_color(a:bg_color_name) : 'NONE'
-    call add(l:highlights, 'guibg=' . l:bg_color)
 
     let l:fmt_arg = get(a:, '1')
     let l:fmt = l:fmt_arg !=# '0' && l:fmt_arg !=# '' ? l:fmt_arg : 'NONE'
-    call add(l:highlights, 'gui=' . l:fmt)
-    call add(l:highlights, 'cterm=' . l:fmt)
 
-    let l:cmd = join(l:highlights, ' ')
-    execute l:cmd
+    execute join(['hi!', a:group_name, 'guifg=' . l:fg_color, 'guibg=' . l:bg_color, 'gui=' . l:fmt, 'cterm=' . l:fmt], ' ')
 endfunction
