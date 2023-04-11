@@ -585,6 +585,8 @@ if has('nvim')
     hi! link @lsp.type.variable @variable
     hi! link @lsp.type.keyword Keyword
     hi! link @lsp.type.constant Constant
+    hi! link @lsp.type.delegate @function
+    hi! link @lsp.type.conditional @conditional
 endif
 
 " }}}
