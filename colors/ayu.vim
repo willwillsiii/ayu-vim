@@ -390,12 +390,6 @@ call ayu#hi('IndentBlanklineContextChar', 'editor_indentGuide_active', '')
 
 " }}}
 
-" hlargs.nvim: {{{
-
-hi! link Hlargs @parameter
-
-" }}}
-
 " vim-illuminate: {{{
 
 hi! link IlluminatedWordRead Visual
@@ -587,6 +581,12 @@ if has('nvim')
     hi! link @lsp.type.constant Constant
     hi! link @lsp.type.delegate @function
     hi! link @lsp.type.conditional @conditional
+
+    " hlargs.nvim: {{{
+
+    hi! link Hlargs @parameter
+
+    " }}}
 endif
 
 " }}}
