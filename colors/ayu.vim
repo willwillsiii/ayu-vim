@@ -61,6 +61,17 @@ call ayu#hi('Repeat', 'extended_repeat', '')
 
 "}}}
 
+" Mode highlight groups: {{{
+
+call ayu#hi('NormalMode', 'syntax_entity', '')
+call ayu#hi('InsertMode', 'syntax_string', '')
+call ayu#hi('VisualMode', 'syntax_constant', '')
+call ayu#hi('CommandMode', 'syntax_func', '')
+call ayu#hi('ReplaceMode', 'vcs_removed', '')
+hi! link SelectMode VisualMode
+
+"}}}
+
 " Neovim Highlights: {{{
 
 call ayu#hi('NormalFloat', 'editor_fg', 'ui_panel_bg')
