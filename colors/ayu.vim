@@ -356,6 +356,9 @@ call ayu#hi('rubyModule', 'syntax_keyword', '')
 call ayu#hi('rubyRegexp', 'syntax_regexp', '')
 call ayu#hi('rubyRegexpDelimiter', 'syntax_regexp', '')
 call ayu#hi('rubyStringDelimiter', 'syntax_string', '')
+call ayu#hi('rubyClass', 'syntax_keyword', '')
+call ayu#hi('rubyAttribute', 'syntax_tag', '')
+call ayu#hi('rubyDefine', 'extended_keyword_func', '')
 
 " }}}
 
