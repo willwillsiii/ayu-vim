@@ -76,6 +76,7 @@ hi! link SelectMode VisualMode
 
 call ayu#hi('NormalFloat', 'editor_fg', 'ui_panel_bg')
 call ayu#hi('FloatBorder', 'editor_fg', 'ui_panel_bg')
+call ayu#hi('FloatTitle', 'syntax_keyword', 'ui_panel_bg')
 
 " }}}
 
