@@ -590,6 +590,7 @@ if has('nvim')
     hi! link @lsp.type.parameter @parameter
     hi! link @lsp.type.property @property
     hi! link @lsp.type.field @property
+    hi! link @lsp.type.fieldName @property
     hi! link @lsp.type.struct @struct
     hi! link @lsp.type.variable @variable
     hi! link @lsp.type.keyword Keyword
