@@ -590,13 +590,25 @@ if has('nvim')
     hi! link @lsp.type.parameter @parameter
     hi! link @lsp.type.property @property
     hi! link @lsp.type.field @property
-    hi! link @lsp.type.fieldName @property
     hi! link @lsp.type.struct @struct
     hi! link @lsp.type.variable @variable
     hi! link @lsp.type.keyword Keyword
     hi! link @lsp.type.constant Constant
     hi! link @lsp.type.delegate @function
     hi! link @lsp.type.conditional @conditional
+    hi! link @lsp.type.operator Operator
+    hi! link @lsp.type.number Number
+    hi! link @lsp.type.string String
+    hi! link @lsp.type.punctuation Delimiter
+
+    hi! link @lsp.type.fieldName @property
+    hi! link @lsp.type.controlKeyword @conditional
+    hi! link @lsp.type.xmlDocCommentDelimiter Comment
+    hi! link @lsp.type.xmlDocCommentText Comment
+    hi! link @lsp.type.xmlDocCommentName Title
+    hi! link @lsp.type.xmlDocCommentAttributeName Comment
+    hi! link @lsp.type.xmlDocCommentAttributeQuotes Comment
+    hi! link @lsp.type.extensionMethodName @lsp.type.method
 
     " hlargs.nvim: {{{
 
