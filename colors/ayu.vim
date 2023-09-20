@@ -610,6 +610,7 @@ if has('nvim')
     hi! link @lsp.type.xmlDocCommentAttributeQuotes Comment
     hi! link @lsp.type.extensionMethodName @lsp.type.method
     hi! link @lsp.type.stringEscapeCharacter Special
+    hi! link @lsp.type.verbatimStringLiteral @string.regex
 
     " hlargs.nvim: {{{
 
