@@ -609,6 +609,7 @@ if has('nvim')
     hi! link @lsp.type.xmlDocCommentAttributeName Comment
     hi! link @lsp.type.xmlDocCommentAttributeQuotes Comment
     hi! link @lsp.type.extensionMethodName @lsp.type.method
+    hi! link @lsp.type.stringEscapeCharacter Special
 
     " hlargs.nvim: {{{
 
