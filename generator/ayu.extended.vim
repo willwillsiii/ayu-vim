@@ -2,6 +2,11 @@ let g:ayu#palette['extended_fg_idle']          = {'light': '#828C99', 'mirage': 
 let g:ayu#palette['extended_warning']          = {'light': '#FA8D3E', 'mirage': '#FFA759', 'dark': '#FF8F40'}
 let g:ayu#palette['extended_float_bg']         = {'light': '#D8D8D8', 'mirage': '#2D323F', 'dark': '#161e26'}
 
+let g:ayu#palette['extended_delimiter_1'] = {'light': '#F0D5AF', 'mirage': '#FFF9EC', 'dark': '#F0D2A8'}
+let g:ayu#palette['extended_delimiter_2'] = {'light': '#E6BA7E', 'mirage': '#FFE6B3', 'dark': '#E6B673'}
+let g:ayu#palette['extended_delimiter_3'] = {'light': '#B89565', 'mirage': '#FFCA5A', 'dark': '#B8915C'}
+let g:ayu#palette['extended_delimiter_4'] = {'light': '#8A704C', 'mirage': '#FFAE00', 'dark': '#8A7D45'}
+
 let s:extended_palette = get(g:, 'ayu_extended_palette', 0)
 
 if s:extended_palette
@@ -13,7 +18,7 @@ if s:extended_palette
 
     let g:ayu#palette['extended_enum']      = {'light': '#729BFF', 'mirage': '#91B6FF', 'dark': '#8CB1FF'}
     let g:ayu#palette['extended_interface'] = {'light': '#5FCFCF', 'mirage': '#70E6D2', 'dark': '#85EAEE'}
-    let g:ayu#palette['extended_struct']    = {'light': '#2081C5', 'mirage': '#77B6E4', 'dark': '#50ABE0'}
+    let g:ayu#palette['extended_struct']    = {'light': '#71B9ED', 'mirage': '#9DDEFF', 'dark': '#8BD4FF'}
     let g:ayu#palette['extended_generic']   = {'light': '#998CC3', 'mirage': '#AABBEE', 'dark': '#8F8FFF'}
     let g:ayu#palette['extended_namespace'] = {'light': '#F2976F', 'mirage': '#FFA375', 'dark': '#FFB179'}
 else

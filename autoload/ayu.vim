@@ -1,6 +1,6 @@
 " DO NOT EDIT
 " This file is generated using both the 'index.js' script and the 'ayu.extended.vim' file
-" Generated on 'Tue Jan 31 2023 11:09:12 GMT-0500 (Eastern Standard Time)'
+" Generated on 'Wed Oct 04 2023 22:51:18 GMT-0400 (Eastern Daylight Saving Time)'
 
 let g:ayu#palette = {}
 let g:ayu#palette['syntax_tag']                    = {'light': '#55b4d4', 'mirage': '#5ccfe6', 'dark': '#39bae6'}
@@ -41,6 +41,11 @@ let g:ayu#palette['common_error']                  = {'light': '#e65050', 'mirag
 let g:ayu#palette['extended_fg_idle']          = {'light': '#828C99', 'mirage': '#607080', 'dark': '#3E4B59'}
 let g:ayu#palette['extended_warning']          = {'light': '#FA8D3E', 'mirage': '#FFA759', 'dark': '#FF8F40'}
 let g:ayu#palette['extended_float_bg']         = {'light': '#D8D8D8', 'mirage': '#2D323F', 'dark': '#161e26'}
+
+let g:ayu#palette['extended_delimiter_1'] = {'light': '#F0D5AF', 'mirage': '#FFF9EC', 'dark': '#F0D2A8'}
+let g:ayu#palette['extended_delimiter_2'] = {'light': '#E6BA7E', 'mirage': '#FFE6B3', 'dark': '#E6B673'}
+let g:ayu#palette['extended_delimiter_3'] = {'light': '#B89565', 'mirage': '#FFCA5A', 'dark': '#B8915C'}
+let g:ayu#palette['extended_delimiter_4'] = {'light': '#8A704C', 'mirage': '#FFAE00', 'dark': '#8A7D45'}
 
 let s:extended_palette = get(g:, 'ayu_extended_palette', 0)
 

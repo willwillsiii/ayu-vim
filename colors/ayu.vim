@@ -101,6 +101,10 @@ call ayu#hi('Structure', 'syntax_special', '')
 
 call ayu#hi('Special', 'common_accent', '')
 call ayu#hi('Delimiter', 'syntax_special', '')
+call ayu#hi('RainbowDelimiter1', 'extended_delimiter_1', '')
+call ayu#hi('RainbowDelimiter2', 'extended_delimiter_2', '')
+call ayu#hi('RainbowDelimiter3', 'extended_delimiter_3', '')
+call ayu#hi('RainbowDelimiter4', 'extended_delimiter_4', '')
 
 call ayu#hi('Underlined', 'syntax_tag', '', 'underline')
 
