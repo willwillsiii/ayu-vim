@@ -540,6 +540,7 @@ if has('nvim')
     hi! link @keyword.operator @operator
     call ayu#hi('@keyword.return', 'extended_conditional', '')
 
+    hi! link @method Function
     hi! link @method.call @method
 
     hi! link @namespace Include
