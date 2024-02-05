@@ -585,6 +585,9 @@ if has('nvim')
     call ayu#hi('@variable', 'editor_fg', '')
     call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
 
+    hi! link @variable.parameter @parameter
+    hi! link @variable.member @property
+
     " Builtin LSP
 
     hi! link @lsp.type.namespace @namespace
