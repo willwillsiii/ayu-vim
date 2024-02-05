@@ -585,6 +585,8 @@ if has('nvim')
     call ayu#hi('@variable', 'editor_fg', '')
     call ayu#hi('@variable.builtin', 'syntax_constant', '', 'italic')
 
+    hi! link @constant.macro PreProc
+
     hi! link @variable.parameter @parameter
     hi! link @variable.member @property
 
