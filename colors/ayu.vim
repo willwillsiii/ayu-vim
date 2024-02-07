@@ -110,7 +110,7 @@ call ayu#hi('Underlined', 'syntax_tag', '', 'underline')
 
 call ayu#hi('Ignore', '', '')
 
-call ayu#hi('Error', 'editor_bg', 'common_error')
+call ayu#hi('Error', 'common_error', 'editor_bg')
 
 call ayu#hi('Todo', 'syntax_markup', '')
 
