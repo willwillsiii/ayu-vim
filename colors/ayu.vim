@@ -22,7 +22,7 @@ call ayu#hi('CursorLine', '', 'editor_line')
 call ayu#hi('CursorLineNr', 'common_accent', 'editor_line')
 call ayu#hi('LineNr', 'editor_gutter_normal', '')
 call ayu#hi('Directory', 'syntax_func', '')
-call ayu#hi('ErrorMsg', 'editor_fg', 'common_error', 'standout')
+call ayu#hi('ErrorMsg', 'editor_bg', 'common_error', 'standout')
 call ayu#hi('VertSplit', 'ui_panel_bg', 'ui_panel_bg')
 call ayu#hi('Folded', 'extended_fg_idle', 'ui_bg')
 hi! FoldColumn NONE
@@ -110,7 +110,7 @@ call ayu#hi('Underlined', 'syntax_tag', '', 'underline')
 
 call ayu#hi('Ignore', '', '')
 
-call ayu#hi('Error', 'editor_fg', 'common_error')
+call ayu#hi('Error', 'common_error', 'editor_bg')
 
 call ayu#hi('Todo', 'syntax_markup', '')
 
