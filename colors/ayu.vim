@@ -515,6 +515,7 @@ if has('nvim')
     endif
 
     hi! link LspReferenceRead Visual
+    hi! link LspSignatureActiveParameter Visual
 
     call ayu#hi('@struct', 'extended_struct', '')
     call ayu#hi('@interface', 'extended_interface', '')
