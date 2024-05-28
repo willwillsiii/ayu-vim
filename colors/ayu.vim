@@ -478,6 +478,12 @@ call ayu#hi('rustRepeat', 'extended_repeat', '')
 
 " }}}
 
+" vim-floaterm: {{{
+
+call ayu#hi('FloatermBorder', 'editor_fg', '')
+
+" }}}
+
 " Neovim: {{{
 
 if has('nvim')

@@ -51,6 +51,7 @@ Here is a list of plugins which have been customized to work better with this th
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic). Simple winbar/statusline plugin that shows your current code context.
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [modicator.nvim](https://github.com/mawkler/modicator.nvim). Cursor line mode indicator.
+- [vim-floaterm](https://github.com/voldikss/vim-floaterm). Terminal in floating window.
 
 And here is a list of other supported syntax groups:
 
