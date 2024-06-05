@@ -484,6 +484,13 @@ call ayu#hi('FloatermBorder', 'editor_fg', '')
 
 " }}}
 
+" toolbar: {{{
+
+call ayu#hi('ToolbarLine', '', 'ui_line')
+call ayu#hi('ToolbarButton', 'editor_fg', 'ui_selection_normal')
+
+" }}}
+
 " Neovim: {{{
 
 if has('nvim')
