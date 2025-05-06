@@ -402,6 +402,29 @@ call ayu#hi('CmpItemKindVariable', 'editor_fg', '')
 
 " }}}
 
+" blink.cmp: {{{
+
+call ayu#hi('BlinkCmpKindClass', 'syntax_entity', '')
+call ayu#hi('BlinkCmpKindConstant', 'syntax_constant', '')
+call ayu#hi('BlinkCmpKindConstructor', 'common_accent', '')
+call ayu#hi('BlinkCmpKindEnum', 'extended_enum', '')
+call ayu#hi('BlinkCmpKindEnumMember', 'syntax_constant', '')
+call ayu#hi('BlinkCmpKindField', 'syntax_tag', '')
+call ayu#hi('BlinkCmpKindFunction', 'syntax_func', '')
+call ayu#hi('BlinkCmpKindInterface', 'extended_interface', '')
+call ayu#hi('BlinkCmpKindKeyword', 'syntax_keyword', '')
+call ayu#hi('BlinkCmpKindMethod', 'syntax_func', '')
+call ayu#hi('BlinkCmpKindModule', 'extended_namespace', '')
+call ayu#hi('BlinkCmpKindOperator', 'syntax_keyword', '')
+call ayu#hi('BlinkCmpKindProperty', 'syntax_tag', '')
+call ayu#hi('BlinkCmpKindSnippet', 'syntax_comment', '')
+call ayu#hi('BlinkCmpKindStruct', 'extended_struct', '')
+call ayu#hi('BlinkCmpKindText', 'syntax_comment', '')
+call ayu#hi('BlinkCmpKindTypeParameter', 'extended_generic', '')
+call ayu#hi('BlinkCmpKindVariable', 'editor_fg', '')
+
+" }}}
+
 " Indent Blankline: {{{
 
 call ayu#hi('IndentBlanklineChar', 'editor_indentGuide_normal', '')
